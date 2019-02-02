@@ -1,0 +1,10 @@
+13:30:18 **** Incremental Build of configuration Debug for project As0 ****
+make all 
+Building target: As0
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "As0"  ./src/BaseApplication.o ./src/TutorialApplication.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: As0
+ 
+13:30:42 **** Incremental Build of configuration Debug for project As0 ****
+make all 
+make: Nothing to be done for 'all'.

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="/usr/lib/x86_64-linux-gnu" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
+</section>

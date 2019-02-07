@@ -123,35 +123,36 @@ bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 	static Ogre::Vector3 camVec = mCamera->getPosition();
 	static bool ballIsMoving = false;
 
-	if(mKeyboard->isKeyDown(OIS::KC_8))//+z
+	if(mKeyboard->isKeyDown(OIS::KC_UP))//+z
 	{
 		ballVelocity.z += move;
 	}
-	if(mKeyboard->isKeyDown(OIS::KC_2))//-z
+	if(mKeyboard->isKeyDown(OIS::KC_DOWN))//-z
 	{
 		ballVelocity.z -= move;
 	}
-	if(mKeyboard->isKeyDown(OIS::KC_6))//+x
+	if(mKeyboard->isKeyDown(OIS::KC_RIGHT))//+x
 	{
 		ballVelocity.x += move;
 	}
-	if(mKeyboard->isKeyDown(OIS::KC_4))//-x
+	if(mKeyboard->isKeyDown(OIS::KC_LEFT))//-x
 	{
 		ballVelocity.x -= move;
 	}
 
-	if(mKeyboard->isKeyDown(OIS::KC_J))//Velocity increase
+	if(mKeyboard->isKeyDown(OIS::KC_J))//+y
 	{
-		move += 2;
+		ballVelocity.y += move;
 	}
-	if(mKeyboard->isKeyDown(OIS::KC_K))//Velocity decrease
+	if(mKeyboard->isKeyDown(OIS::KC_K))//-y
 	{
-		move -= 2;
+		ballVelocity.y -= move;
 	}
 
 	if(mKeyboard->isKeyDown(OIS::KC_SPACE))//reset velocity
 	{
 		ballVelocity.x = 0;
+		ballVelocity.y = 0;
 		ballVelocity.z = 0;
 	}
 
@@ -165,15 +166,39 @@ bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 	if(mKeyboard->isKeyDown(OIS::KC_E))//camera up
 	{
 		camVec = mCamera->getPosition();
-		camVec.y += 1;
+		camVec.y += 0.5;
 		mCamera->setPosition(camVec);
 	}
 	if(mKeyboard->isKeyDown(OIS::KC_F))//camera down
 	{
 		camVec = mCamera->getPosition();
-		camVec.y -= 1;
+		camVec.y -= 0.5;
 		mCamera->setPosition(camVec);
 	}
+//	if(mKeyboard->isKeyDown(OIS::KC_W))//camera down
+//	{
+//		camVec = mCamera->getPosition();
+//		camVec.z -= 1;
+//		mCamera->setPosition(camVec);
+//	}
+//	if(mKeyboard->isKeyDown(OIS::KC_S))//camera down
+//	{
+//		camVec = mCamera->getPosition();
+//		camVec.z += 1;
+//		mCamera->setPosition(camVec);
+//	}
+//	if(mKeyboard->isKeyDown(OIS::KC_A))//camera down
+//	{
+//		camVec = mCamera->getPosition();
+//		camVec.x -= 1;
+//		mCamera->setPosition(camVec);
+//	}
+//	if(mKeyboard->isKeyDown(OIS::KC_D))//camera down
+//	{
+//		camVec = mCamera->getPosition();
+//		camVec.x += 1;
+//		mCamera->setPosition(camVec);
+//	}
 
 
 	//Move ball

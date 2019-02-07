@@ -1,9 +1,31 @@
-19:26:54 **** Build of configuration Debug for project Lab0 ****
+12:46:52 **** Incremental Build of configuration Debug for project Lab0 ****
 make all 
-make: Nothing to be done for 'all'.
-19:27:04 **** Incremental Build of configuration Debug for project Lab0 ****
-make all 
-make: Nothing to be done for 'all'.
-19:33:09 **** Build of configuration Debug for project Lab0 ****
+Building file: ../src/BaseApplication.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/orion996/Documents/CS/CS381/Labs/Lab0/inc" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BaseApplication.d" -MT"src/BaseApplication.d" -o "src/BaseApplication.o" "../src/BaseApplication.cpp"
+In file included from ../src/BaseApplication.cpp:18:0:
+/home/orion996/Documents/CS/CS381/Labs/Lab0/inc/BaseApplication.h: In constructor ‘BaseApplication::BaseApplication()’:
+/home/orion996/Documents/CS/CS381/Labs/Lab0/inc/BaseApplication.h:124:33: warning: ‘BaseApplication::mKeyboard’ will be initialized after [-Wreorder]
+     OIS::Keyboard*              mKeyboard;
+                                 ^
+/home/orion996/Documents/CS/CS381/Labs/Lab0/inc/BaseApplication.h:111:33: warning:   ‘Ogre::OverlaySystem* BaseApplication::mOverlaySystem’ [-Wreorder]
+     Ogre::OverlaySystem*        mOverlaySystem;
+                                 ^
+../src/BaseApplication.cpp:25:1: warning:   when initialized here [-Wreorder]
+ BaseApplication::BaseApplication(void)
+ ^
+Finished building: ../src/BaseApplication.cpp
+ 
+Building file: ../src/TutorialApplication.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/orion996/Documents/CS/CS381/Labs/Lab0/inc" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TutorialApplication.d" -MT"src/TutorialApplication.d" -o "src/TutorialApplication.o" "../src/TutorialApplication.cpp"
+Finished building: ../src/TutorialApplication.cpp
+ 
+Building target: Lab0
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "Lab0"  ./src/BaseApplication.o ./src/TutorialApplication.o   -lOgreOverlay -lOgreMain -lOIS
+Finished building target: Lab0
+ 
+12:47:09 **** Incremental Build of configuration Debug for project Lab0 ****
 make all 
 make: Nothing to be done for 'all'.

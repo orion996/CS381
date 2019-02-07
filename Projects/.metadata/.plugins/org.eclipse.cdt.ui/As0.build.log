@@ -1,6 +1,31 @@
-13:30:42 **** Incremental Build of configuration Debug for project As0 ****
+13:08:57 **** Incremental Build of configuration Debug for project As0 ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/BaseApplication.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I"/home/orion996/Documents/CS/CS381/Projects/As0/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BaseApplication.d" -MT"src/BaseApplication.d" -o "src/BaseApplication.o" "../src/BaseApplication.cpp"
+In file included from ../src/BaseApplication.cpp:18:0:
+/home/orion996/Documents/CS/CS381/Projects/As0/inc/BaseApplication.h: In constructor ‘BaseApplication::BaseApplication()’:
+/home/orion996/Documents/CS/CS381/Projects/As0/inc/BaseApplication.h:124:33: warning: ‘BaseApplication::mKeyboard’ will be initialized after [-Wreorder]
+     OIS::Keyboard*              mKeyboard;
+                                 ^
+/home/orion996/Documents/CS/CS381/Projects/As0/inc/BaseApplication.h:111:33: warning:   ‘Ogre::OverlaySystem* BaseApplication::mOverlaySystem’ [-Wreorder]
+     Ogre::OverlaySystem*        mOverlaySystem;
+                                 ^
+../src/BaseApplication.cpp:25:1: warning:   when initialized here [-Wreorder]
+ BaseApplication::BaseApplication(void)
+ ^
+Finished building: ../src/BaseApplication.cpp
+ 
+Building file: ../src/TutorialApplication.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I"/home/orion996/Documents/CS/CS381/Projects/As0/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TutorialApplication.d" -MT"src/TutorialApplication.d" -o "src/TutorialApplication.o" "../src/TutorialApplication.cpp"
+Finished building: ../src/TutorialApplication.cpp
+ 
+Building target: As0
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "As0"  ./src/BaseApplication.o ./src/TutorialApplication.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: As0
+ 
 
-13:30:43 Build Finished (took 412ms)
+13:09:03 Build Finished (took 6s.640ms)
 

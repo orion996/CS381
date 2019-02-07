@@ -1,6 +1,6 @@
 src/TutorialApplication.d: ../src/TutorialApplication.cpp \
- /home/orion996/Documents/CS/CS381/Workspace/Lab0/inc/TutorialApplication.h \
- /home/orion996/Documents/CS/CS381/Workspace/Lab0/inc/BaseApplication.h \
+ /home/orion996/Documents/CS/CS381/Labs/Lab0/inc/TutorialApplication.h \
+ /home/orion996/Documents/CS/CS381/Labs/Lab0/inc/BaseApplication.h \
  /usr/local/include/OGRE/OgreCamera.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -234,9 +234,9 @@ src/TutorialApplication.d: ../src/TutorialApplication.cpp \
  /usr/include/ois/OISForceFeedback.h \
  /usr/local/include/OGRE/SdkCameraMan.h
 
-/home/orion996/Documents/CS/CS381/Workspace/Lab0/inc/TutorialApplication.h:
+/home/orion996/Documents/CS/CS381/Labs/Lab0/inc/TutorialApplication.h:
 
-/home/orion996/Documents/CS/CS381/Workspace/Lab0/inc/BaseApplication.h:
+/home/orion996/Documents/CS/CS381/Labs/Lab0/inc/BaseApplication.h:
 
 /usr/local/include/OGRE/OgreCamera.h:
 

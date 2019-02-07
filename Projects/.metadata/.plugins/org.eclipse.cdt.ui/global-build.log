@@ -1,10 +1,28 @@
-13:30:18 **** Incremental Build of configuration Debug for project As0 ****
+17:46:26 **** Incremental Build of configuration Debug for project As1 ****
 make all 
-Building target: As0
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "As0"  ./src/BaseApplication.o ./src/TutorialApplication.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: As0
+Building file: ../src/TutorialApplication.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I"/home/orion996/Documents/CS/CS381/Projects/As1/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TutorialApplication.d" -MT"src/TutorialApplication.d" -o "src/TutorialApplication.o" "../src/TutorialApplication.cpp"
+../src/TutorialApplication.cpp: In member function ‘bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent&)’:
+../src/TutorialApplication.cpp:117:14: warning: unused variable ‘mouseDownLastFrame’ [-Wunused-variable]
+  static bool mouseDownLastFrame = false;
+              ^
+../src/TutorialApplication.cpp:118:20: warning: unused variable ‘toggleTimer’ [-Wunused-variable]
+  static Ogre::Real toggleTimer = 0.0;
+                    ^
+../src/TutorialApplication.cpp:119:20: warning: unused variable ‘rotate’ [-Wunused-variable]
+  static Ogre::Real rotate = .13;
+                    ^
+../src/TutorialApplication.cpp:124:14: warning: unused variable ‘ballIsMoving’ [-Wunused-variable]
+  static bool ballIsMoving = false;
+              ^
+Finished building: ../src/TutorialApplication.cpp
  
-13:30:42 **** Incremental Build of configuration Debug for project As0 ****
+Building target: As1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "As1"  ./src/BaseApplication.o ./src/TutorialApplication.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: As1
+ 
+17:46:34 **** Incremental Build of configuration Debug for project As1 ****
 make all 
 make: Nothing to be done for 'all'.

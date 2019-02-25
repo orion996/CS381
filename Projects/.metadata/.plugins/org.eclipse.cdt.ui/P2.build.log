@@ -1,0 +1,28 @@
+12:58:35 **** Incremental Build of configuration Debug for project P2 ****
+make all 
+Building file: ../src/TutorialApplication.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I"/home/orion996/Documents/CS/CS381/Projects/P2/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TutorialApplication.d" -MT"src/TutorialApplication.d" -o "src/TutorialApplication.o" "../src/TutorialApplication.cpp"
+In file included from /home/orion996/Documents/CS/CS381/Projects/P2/inc/EntityMgr.h:15:0,
+                 from ../src/TutorialApplication.cpp:2:
+/home/orion996/Documents/CS/CS381/Projects/P2/inc/Entity381.h:36:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool isSelected = false;
+                    ^
+In file included from ../src/TutorialApplication.cpp:2:0:
+/home/orion996/Documents/CS/CS381/Projects/P2/inc/EntityMgr.h:36:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  int mIndex = 0;
+               ^
+../src/TutorialApplication.cpp: In member function ‘bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent&)’:
+../src/TutorialApplication.cpp:56:21: warning: unused variable ‘rotConst’ [-Wunused-variable]
+  static const float rotConst = 1.0;
+                     ^
+Finished building: ../src/TutorialApplication.cpp
+ 
+Building target: P2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "P2"  ./src/Aspect.o ./src/BaseApplication.o ./src/Entity381.o ./src/EntityMgr.o ./src/Physics.o ./src/Renderable.o ./src/Rotator.o ./src/TutorialApplication.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: P2
+ 
+
+12:58:38 Build Finished (took 3s.472ms)
+

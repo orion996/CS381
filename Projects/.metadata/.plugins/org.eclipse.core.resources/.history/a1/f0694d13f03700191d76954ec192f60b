@@ -1,0 +1,44 @@
+/*
+ * Rotator.cpp
+ *
+ *  Created on: Feb 22, 2019
+ *      Author: orion996
+ */
+#include "Rotator.h"
+
+Rotator::Rotator()
+{
+	//do nothing
+}
+
+Rotator::Rotator(float rs, Ogre::SceneManager* mgr, std::string name)
+{
+	rotationSpeed = rs;
+	mScnMgr = mgr;
+	mName = name;
+	mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+}
+
+Rotator::~Rotator()
+{
+
+}
+
+float Rotator::getRotationSpeed()
+{
+	return rotationSpeed;
+}
+
+void Rotator::setRotationSpeed(float rs)
+{
+	rotationSpeed = rs;
+}
+
+void Rotator::Tick(float dt)
+{
+	mScnNode->yaw(Ogre::Degree(rotationSpeed) * dt);
+}
+
+
+
+

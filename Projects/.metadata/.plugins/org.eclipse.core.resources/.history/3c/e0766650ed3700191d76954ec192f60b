@@ -1,0 +1,34 @@
+/*
+ * Rotator.h
+ *
+ *  Created on: Feb 22, 2019
+ *      Author: orion996
+ */
+
+#ifndef INC_ROTATOR_H_
+#define INC_ROTATOR_H_
+
+#include <OgreEntity.h>
+#include <OgreVector3.h>
+
+#include "Aspect.h"
+
+class Rotator : public Aspect
+{
+public:
+	Rotator();
+	Rotator(float);
+	~Rotator();
+
+	Ogre::Vector3* getRotationSpeed();
+	void setRotationSpeed(float);
+
+	void Tick(float);
+
+private:
+	float rotationSpeed
+	Ogre::Vector3* mPos;
+
+
+
+#endif /* INC_ROTATOR_H_ */

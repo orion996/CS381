@@ -1,0 +1,45 @@
+/*
+ * Physics.cpp
+ *
+ *  Created on: Feb 22, 2019
+ *      Author: orion996
+ */
+#include "Physics.h"
+
+Physics::Physics()
+{
+	//do nothing
+}
+
+Physics::Physics(Ogre::Vector3 pos)
+{
+	mVelocity = Ogre::Vector3(0,0,0);
+	mPos = pos;
+}
+
+Physics::~Physics()
+{
+	//do nothing
+}
+
+void Physics::setVelocity(Ogre::Vector3 velocity)
+{
+	mVelocity.x = velocity.x;
+	mVelocity.y = velocity.y;
+	mVelocity.z = velocity.z;
+}
+
+Ogre::Vector3 Physics::getVelocity()
+{
+	return mVelocity;
+}
+
+void Physics::Tick(float dt)
+{
+	mPos.x = mPos.x + (mVelocity.x * dt);
+	mPos.y = mPos.y + (mVelocity.y * dt);
+	mPos.z = mPos.z + (mVelocity.z * dt);
+}
+
+
+

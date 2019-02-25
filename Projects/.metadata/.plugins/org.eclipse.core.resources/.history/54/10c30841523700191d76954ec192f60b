@@ -1,0 +1,33 @@
+/*
+ * Physics.h
+ *
+ *  Created on: Feb 22, 2019
+ *      Author: orion996
+ */
+
+#ifndef INC_PHYSICS_H_
+#define INC_PHYSICS_H_
+
+
+#include <OgreSceneNode.h>
+#include <OgreSceneManager.h>
+#include <OgreEntity.h>
+#include <OgreVector3.h>
+#include <string>
+
+#include "Aspect.h"
+
+class Physics : public Aspect
+{
+public:
+	Physics();
+	Physics(Ogre::Vector3, Ogre::SceneManager*);
+	~Physics();
+
+	void Tick(float);
+
+
+};
+
+
+#endif /* INC_PHYSICS_H_ */

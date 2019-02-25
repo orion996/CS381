@@ -1,0 +1,58 @@
+/*
+ * Entity381.cpp
+ *
+ *  Created on: Feb 22, 2019
+ *      Author: orion996
+ */
+#include "Entity381.h"
+
+Entity381::Entity381()
+{
+	//do nothing
+}
+
+Entity381::Entity381(Ogre::SceneManager* mgr, bool objType, std::string name, Ogre::Vector3 pos)
+{
+	mScnMgr = mgr;
+	mPos = pos;
+
+	Renderable* renderable = new Renderable(mPos, mScnMgr, objType, name);
+
+	mScnNode = renderable->getSceneNode();
+
+	this->addAspect(renderable);
+
+}
+
+Entity381::~Entity381()
+{
+	//do nothing
+}
+
+void Entity381::Tick(float dt)
+{
+	for (int i=0 ; i < aspects.size() ; i++)
+	{
+		aspects.at(i)->Tick(dt);
+	}
+}
+
+void Entity381::addAspect(Aspect* asp)
+{
+	aspects.push_back(asp);
+}
+
+void Entity381::setPosition(Ogre::Vector3 pos)
+{
+	mPos.x = pos.x;
+	mPos.y = pos.y;
+	mPos.z = pos.z;
+}
+
+Aspect* Entity381::getAspect()
+{
+	return aspects[mIndex];
+}
+
+
+

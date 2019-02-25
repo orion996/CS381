@@ -1,0 +1,36 @@
+/*
+ * Entity381.h
+ *
+ *  Created on: Feb 22, 2019
+ *      Author: orion996
+ */
+
+#ifndef INC_ENTITY381_H_
+#define INC_ENTITY381_H_
+
+#include "Aspect.h"
+#include "Renderable.h"
+#include "Physics.h"
+#include "Rotator.h"
+
+#include <OgreVector.h>
+#include <OgreSceneManager.h>
+#include <vector>
+
+class Entity381
+{
+public:
+	Entity381();
+	Entity381(Ogre::SceneManager*, bool, std::string);
+
+	void Tick(float dt);
+	void setPosition(Ogre::Vector3);
+	void addAspect(Aspect*);
+
+private:
+	std::vector<Aspect*> aspects;
+};
+
+
+
+#endif /* INC_ENTITY381_H_ */

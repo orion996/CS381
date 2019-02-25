@@ -31,17 +31,32 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" partName="TutorialApplication.cpp" path="/home/orion996/Documents/CS/CS381/Projects/As1/src/TutorialApplication.cpp" title="TutorialApplication.cpp" tooltip="As1/src/TutorialApplication.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/As1/src/TutorialApplication.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4331" selectionTopPixel="1800"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" partName="TutorialApplication.cpp" path="/home/orion996/Documents/CS/CS381/Projects/P2/src/TutorialApplication.cpp" title="TutorialApplication.cpp" tooltip="P2/src/TutorialApplication.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/P2/src/TutorialApplication.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4277" selectionTopPixel="2337"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.h" partName="BaseApplication.h" path="/home/orion996/Documents/CS/CS381/Projects/As1/inc/BaseApplication.h" title="BaseApplication.h" tooltip="As1/inc/BaseApplication.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/As1/inc/BaseApplication.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3996" selectionTopPixel="1253"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.h" partName="TutorialApplication.h" path="/home/orion996/Documents/CS/CS381/Projects/P2/inc/TutorialApplication.h" title="TutorialApplication.h" tooltip="P2/inc/TutorialApplication.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/P2/inc/TutorialApplication.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="461" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.cpp" partName="BaseApplication.cpp" path="/home/orion996/Documents/CS/CS381/Projects/P2/src/BaseApplication.cpp" title="BaseApplication.cpp" tooltip="P2/src/BaseApplication.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/P2/src/BaseApplication.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13246" selectionTopPixel="1566"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.h" partName="BaseApplication.h" path="/home/orion996/Documents/CS/CS381/Projects/P2/inc/BaseApplication.h" title="BaseApplication.h" tooltip="P2/inc/BaseApplication.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/P2/inc/BaseApplication.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3306" selectionTopPixel="1152"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" partName="Entity381.h" path="/home/orion996/Documents/CS/CS381/Projects/P2/inc/Entity381.h" title="Entity381.h" tooltip="P2/inc/Entity381.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/P2/inc/Entity381.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="313" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -49,9 +64,11 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (3 items)"/>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (4 items)"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="163" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -197,14 +214,23 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView"/>
-<fastViewBars/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@41a0a5f3" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.1593985"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@66afacdb" orientation="256" selectedTabId="org.eclipse.ui.views.ProblemView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="topLeft">
@@ -225,18 +251,14 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.082170546" ratioLeft="106" ratioRight="1184" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.18217054" ratioLeft="235" ratioRight="1055" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.9444444" ratioLeft="629" ratioRight="37" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
@@ -250,6 +272,18 @@
 </presentation>
 </folder>
 </info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@41a0a5f3" ratio="0.75" ratioLeft="474" ratioRight="158" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@66afacdb" ratio="0.75" ratioLeft="471" ratioRight="157" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
 </mainWindow>
 </layout>
 </perspective>
@@ -257,164 +291,169 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/src/Renderable.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/inc/Entity381.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/src/Entity381.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/inc/Rotator.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/src/Rotator.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/src/TutorialApplication.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As1/src/TutorialApplication.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As1/src/BaseApplication.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As1/inc/TutorialApplication.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As1/inc/BaseApplication.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As0/src/TutorialApplication.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As1/src/BaseApplication.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As1/inc/BaseApplication.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As0/src/TutorialApplication.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/src/EntityMgr.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/inc/EntityMgr.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/inc/TutorialApplication.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/src/BaseApplication.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/inc/BaseApplication.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/P2/inc/Entity381.h"/>
 </editors>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="6978" y="0"/>
+<item historyLabel="Rotator.cpp" index="4">
+<position info="not_deleted" x="182" y="0"/>
 </item>
-<item historyLabel="BaseApplication.cpp" index="1">
+<item historyLabel="Rotator.h" index="3">
+<position info="not_deleted" x="433" y="0"/>
+</item>
+<item historyLabel="Rotator.cpp" index="4">
+<position info="not_deleted" x="182" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="2">
+<position info="not_deleted" x="653" y="0"/>
+</item>
+<item historyLabel="Renderable.cpp" index="0">
+<position info="not_deleted" x="465" y="57"/>
+</item>
+<item historyLabel="Entity381.cpp" index="2">
+<position info="not_deleted" x="695" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="1">
+<position info="not_deleted" x="196" y="0"/>
+</item>
+<item historyLabel="Rotator.h" index="3">
+<position info="not_deleted" x="433" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="1">
+<position info="not_deleted" x="196" y="0"/>
+</item>
+<item historyLabel="Rotator.h" index="3">
+<position info="not_deleted" x="433" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="2">
+<position info="not_deleted" x="744" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="1">
+<position info="not_deleted" x="216" y="0"/>
+</item>
+<item historyLabel="Rotator.cpp" index="4">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="4287" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="6">
+<position info="not_deleted" x="4770" y="281"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="2795" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="1">
+<position info="not_deleted" x="543" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="2">
+<position info="not_deleted" x="1152" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="3171" y="0"/>
+</item>
+<item historyLabel="EntityMgr.cpp" index="7">
+<position info="not_deleted" x="489" y="58"/>
+</item>
+<item historyLabel="EntityMgr.h" index="8">
+<position info="not_deleted" x="468" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="3171" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="3834" y="0"/>
+</item>
+<item historyLabel="EntityMgr.cpp" index="7">
+<position info="not_deleted" x="489" y="58"/>
+</item>
+<item historyLabel="EntityMgr.h" index="8">
+<position info="not_deleted" x="562" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="3834" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="4286" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="4178" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="BaseApplication.h" index="3">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="BaseApplication.cpp" index="1">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="TutorialApplication.h" index="2">
-<position info="not_deleted" x="470" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="6978" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="5413" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="5498" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="5545" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
+<item historyLabel="TutorialApplication.cpp" index="6">
+<position info="not_deleted" x="4770" y="281"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="6964" y="0"/>
+<item historyLabel="TutorialApplication.h" index="9">
+<position info="not_deleted" x="279" y="0"/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="6026" y="0"/>
+<item historyLabel="TutorialApplication.h" index="9">
+<position info="not_deleted" x="461" y="0"/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="6513" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="6478" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="6513" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="1637" y="0"/>
-</item>
-<item historyLabel="BaseApplication.cpp" index="1">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="1637" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="4">
-<position info="not_deleted" x="1056" y="38"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="1637" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="1512" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="4">
-<position info="not_deleted" x="1128" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="BaseApplication.cpp" index="1">
-<position info="not_deleted" x="81" y="0"/>
+<item historyLabel="TutorialApplication.h" index="9">
+<position info="not_deleted" x="474" y="15"/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="4">
-<position info="not_deleted" x="1128" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="BaseApplication.cpp" index="5">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="BaseApplication.cpp" index="5">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="BaseApplication.h" index="6">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="BaseApplication.h" index="6">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
+<item historyLabel="TutorialApplication.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="7">
-<position/>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="5567" y="0"/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="6980" y="0"/>
+<item historyLabel="TutorialApplication.h" index="9">
+<position info="not_deleted" x="461" y="0"/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="3934" y="0"/>
+<item historyLabel="TutorialApplication.cpp" index="5">
+<position info="not_deleted" x="4277" y="0"/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position/>
+<item historyLabel="BaseApplication.cpp" index="10">
+<position info="not_deleted" x="13246" y="0"/>
 </item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="3341" y="0"/>
+<item historyLabel="BaseApplication.h" index="11">
+<position info="not_deleted" x="3306" y="0"/>
 </item>
-<item historyLabel="BaseApplication.h" index="6">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="2383" y="0"/>
-</item>
-<item historyLabel="BaseApplication.h" index="6">
-<position info="not_deleted" x="3996" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="2383" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="4875" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="7">
-<position info="not_deleted" x="252" y="20"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="4875" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="4856" y="0"/>
-</item>
-<item active="true" historyLabel="TutorialApplication.cpp" index="0">
-<position/>
+<item active="true" historyLabel="Entity381.h" index="12">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -422,6 +461,13 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="topLeft"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="topRight"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -429,24 +475,57 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@41a0a5f3"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@66afacdb"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" tooltip="As0/src/TutorialApplication.cpp">
-<persistable path="/As0/src/TutorialApplication.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" tooltip="P2/inc/Entity381.h">
+<persistable path="/P2/inc/Entity381.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.h" tooltip="As1/inc/BaseApplication.h">
-<persistable path="/As1/inc/BaseApplication.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.h" tooltip="P2/inc/BaseApplication.h">
+<persistable path="/P2/inc/BaseApplication.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.cpp" tooltip="As1/src/BaseApplication.cpp">
-<persistable path="/As1/src/BaseApplication.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.cpp" tooltip="P2/src/BaseApplication.cpp">
+<persistable path="/P2/src/BaseApplication.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Rotator.cpp" tooltip="P2/src/Rotator.cpp">
+<persistable path="/P2/src/Rotator.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.h" tooltip="P2/inc/TutorialApplication.h">
+<persistable path="/P2/inc/TutorialApplication.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" tooltip="As1/src/TutorialApplication.cpp">
 <persistable path="/As1/src/TutorialApplication.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.h" tooltip="As1/inc/TutorialApplication.h">
-<persistable path="/As1/inc/TutorialApplication.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" tooltip="As0/src/TutorialApplication.cpp">
+<persistable path="/As0/src/TutorialApplication.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" tooltip="P2/src/TutorialApplication.cpp">
+<persistable path="/P2/src/TutorialApplication.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Renderable.cpp" tooltip="P2/src/Renderable.cpp">
+<persistable path="/P2/src/Renderable.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Physics.cpp" tooltip="P2/src/Physics.cpp">
+<persistable path="/P2/src/Physics.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Aspect.cpp" tooltip="P2/src/Aspect.cpp">
+<persistable path="/P2/src/Aspect.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" tooltip="P2/src/Entity381.cpp">
+<persistable path="/P2/src/Entity381.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.cpp" tooltip="P2/src/EntityMgr.cpp">
+<persistable path="/P2/src/EntityMgr.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Renderable.h" tooltip="P2/inc/Renderable.h">
+<persistable path="/P2/inc/Renderable.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Physics.h" tooltip="P2/inc/Physics.h">
+<persistable path="/P2/inc/Physics.h"/>
 </file>
 </mruList>
 </workbench>

@@ -30,7 +30,7 @@ void EntityMgr::Tick(float dt)
 	}
 }
 
-void EntityMgr::createEntity(bool obj, std::string name, Ogre::Vector3 pos)
+void EntityMgr::createEntity(std::string obj, std::string name, Ogre::Vector3 pos)
 {
 	Ogre::Vector3 position = Ogre::Vector3(pos.x,pos.y,pos.z);
 	Entity381* newEnt = new Entity381(mScnMgr, obj, name, position);

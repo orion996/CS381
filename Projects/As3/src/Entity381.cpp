@@ -11,12 +11,13 @@ Entity381::Entity381()
 	//do nothing
 }
 
-Entity381::Entity381(Ogre::SceneManager* mgr, bool objType, std::string name, Ogre::Vector3 pos)
+Entity381::Entity381(Ogre::SceneManager* mgr, std::string objType, std::string name, Ogre::Vector3 pos)
 {
 	mScnMgr = mgr;
 	Ogre::Vector3* position = new Ogre::Vector3(pos.x,pos.y,pos.z);
 	mPos = position;
 	mName = name;
+	mVelocity = new Ogre::Vector3(0,0,0);
 
 	//aspects = new std::vector<Aspect*>;
 
@@ -24,11 +25,45 @@ Entity381::Entity381(Ogre::SceneManager* mgr, bool objType, std::string name, Og
 	mScnNode = renderable->getSceneNode();
 	this->addAspect(renderable);//renderable at index 0
 
-	Physics* physics = new Physics(mPos);
+	Physics* physics = new Physics(mPos, mVelocity, mScnNode);
 	this->addAspect(physics);//physics at index 1
 
-	Rotator* rotator = new Rotator(mScnNode);
+	mRotationSpeed = new float;
+	Rotator* rotator = new Rotator(mScnNode, mRotationSpeed);
 	this->addAspect(rotator);//rotator at index 2
+
+	if(objType == "SAILBOAT")
+	{
+		mAcceleration = 5.0;
+		mTurnRate = 0.001;
+	}
+	else if(objType == "CIG")
+	{
+		mAcceleration = 20.0;
+		mTurnRate = 0.003;
+	}
+	else if(objType == "ALIEN")
+	{
+		mAcceleration = 50.0;
+		mTurnRate = 0.008;
+	}
+	else if(objType == "DESTROYER")
+	{
+		mAcceleration = 0.05;
+		mTurnRate = 0.0004;
+	}
+	else if(objType == "CARRIER")
+	{
+		mAcceleration = 0.01;
+		mTurnRate = 0.0002;
+	}
+	else
+	{
+		mAcceleration = 0.0;
+		mTurnRate = 0.0;
+	}
+
+
 
 }
 
@@ -39,7 +74,7 @@ Entity381::~Entity381()
 
 void Entity381::Tick(float dt)
 {
-	for (int i=aspects.size()-1 ; i >=0 ; i--)
+	for (int i=0 ; i<aspects.size() ; i++)
 	{
 		aspects.at(i)->Tick(dt);
 	}
@@ -62,3 +97,95 @@ Aspect* Entity381::getAspect(int index)
 	return aspects.at(index);
 }
 
+Ogre::Vector3* Entity381::getVelocity()
+{
+	return mVelocity;
+}
+
+void Entity381::setVelocity(Ogre::Vector3 vel)
+{
+	*mVelocity = vel;
+}
+
+float* Entity381::getRotSpeed()
+{
+	return mRotationSpeed;
+}
+
+void Entity381::setRotSpeed(float rs)
+{
+	*mRotationSpeed = rs;
+}
+
+Ogre::Real Entity381::getSpeed()
+{
+	return mDesiredSpeed;
+}
+
+float Entity381::getHeading()
+{
+	return mDesiredHeading;
+}
+
+void Entity381::setDesiredHeading(float dHead)
+{
+	mDesiredHeading = dHead;
+}
+
+void Entity381::setDesiredSpeed(Ogre::Real dSpd)
+{
+	mDesiredSpeed = dSpd;
+}
+
+void Entity381::orientedMove()
+{
+	//set speed
+	if(mSpeed > mDesiredSpeed)
+	{
+		mSpeed -= mAcceleration;
+	}
+	if(mSpeed < mDesiredSpeed)
+	{
+		mSpeed += mAcceleration;
+	}
+
+//	mHeading = (mHeading % 360);
+//	mDesiredHeading = (mDesiredHeading % 360);
+
+	//compensate heading to 360 degrees
+	if(mHeading >= 360)
+		mHeading -= 360;
+
+	if(mDesiredHeading >= 360)
+		mDesiredHeading -= 360;
+
+	if(mHeading <= -360)
+		mHeading += 360;
+
+	if(mDesiredHeading <= -360)
+		mDesiredHeading += 360;
+
+	//set heading
+	if(mHeading > mDesiredHeading && mSpeed != 0)
+	{
+		mHeading -= mTurnRate;
+	}
+	else if(mHeading < mDesiredHeading && mSpeed != 0)
+	{
+		mHeading += mTurnRate;
+	}
+
+
+	//set velocity
+	*mVelocity = Ogre::Vector3(
+					(mSpeed * (Ogre::Math::Cos(mHeading))), //Vx = s*cos(h)
+					0,
+					(mSpeed * (Ogre::Math::Sin(mHeading))));//Vy = s*sin(h)
+
+
+	//set direction
+	Ogre::Vector3 src = mScnNode->getOrientation() * Ogre::Vector3::UNIT_X;
+	Ogre::Quaternion quat = src.getRotationTo(*mVelocity);
+	mScnNode->rotate(quat);
+
+}

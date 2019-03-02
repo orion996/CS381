@@ -16,17 +16,17 @@
 class Rotator : public Aspect
 {
 public:
-	Rotator(Ogre::SceneNode*);
+	Rotator(Ogre::SceneNode*, float*);
 	Rotator();
 	~Rotator();
 
-	float getRotationSpeed();
+	float* getRotationSpeed();
 	void setRotationSpeed(float);
 
 	void Tick(float);
 
 private:
-	float rotationSpeed;
+	float* mRotationSpeed;
 	Ogre::SceneNode* mScnNode;
 };
 

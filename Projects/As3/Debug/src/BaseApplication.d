@@ -1,5 +1,5 @@
 src/BaseApplication.d: ../src/BaseApplication.cpp \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/BaseApplication.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/BaseApplication.h \
  /usr/local/include/OGRE/OgreCamera.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -233,7 +233,7 @@ src/BaseApplication.d: ../src/BaseApplication.cpp \
  /usr/include/OIS/OISForceFeedback.h \
  /usr/local/include/OGRE/SdkCameraMan.h
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/BaseApplication.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/BaseApplication.h:
 
 /usr/local/include/OGRE/OgreCamera.h:
 

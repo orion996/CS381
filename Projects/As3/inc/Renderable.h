@@ -20,12 +20,13 @@ class Renderable : public Aspect
 {
 public:
 	Renderable();
-	Renderable(Ogre::Vector3*, Ogre::SceneManager*, bool, std::string);
+	Renderable(Ogre::Vector3*, Ogre::SceneManager*, std::string, std::string);
 	~Renderable();
 
 	virtual void Tick(float dt);
 
 	Ogre::SceneNode* getSceneNode();
+	Ogre::Vector3* getPosition();
 
 	void showBox(bool);
 

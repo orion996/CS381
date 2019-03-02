@@ -1,7 +1,7 @@
 src/Entity381.d: ../src/Entity381.cpp \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Entity381.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Renderable.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Renderable.h \
  /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -124,15 +124,15 @@ src/Entity381.d: ../src/Entity381.cpp \
  /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
  /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
  /usr/local/include/OGRE/OgreNode.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Physics.h \
- /usr/local/include/OGRE/OgreVector3.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Rotator.h
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Physics.h \
+ /usr/local/include/OGRE/OgreVector3.h /usr/local/include/OGRE/OgreMath.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Rotator.h
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Entity381.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Renderable.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Renderable.h:
 
 /usr/local/include/OGRE/OgreSceneNode.h:
 
@@ -384,8 +384,10 @@ src/Entity381.d: ../src/Entity381.cpp \
 
 /usr/local/include/OGRE/OgreNode.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Physics.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Physics.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Rotator.h:
+/usr/local/include/OGRE/OgreMath.h:
+
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Rotator.h:

@@ -12,20 +12,18 @@ TutorialApplication::~TutorialApplication(void)
 
 //GLOBAL VARIABLES
 EntityMgr* entMgr;
-const float surfaceHeight = -120.0;
+const float surfaceHeight = -1.0;
 //*****************
 
 void TutorialApplication::createScene(void)
 {
 	mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5,0.5,0.5));
-	//mSceneMgr->setShadowTechnique(Ogre::SHADOWTYPE_STENCIL_MODULATIVE);
+	mSceneMgr->setShadowTechnique(Ogre::SHADOWTYPE_STENCIL_MODULATIVE);
 
 	mCamera->lookAt(0,0,0);
 	std::cout << mCamera->getDirection() << std::endl;
 
-	Ogre::Light* light = mSceneMgr->createLight("mainLight");
-	light->setPosition(20,80,50);
-
+	makeLight();
 	makeGround();
 	makeSky();
 
@@ -52,110 +50,91 @@ bool TutorialApplication::frameRenderingQueued(const Ogre::FrameEvent& fe)
 bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 {
 	static float toggleTimer = 0.0;
-	static const float moveConst = 25.0;
-	static const float rotConst = 1.0;
-	static float rotSpeed = 0;
+
+	static float speed = 0;
+	static float heading = 0;
+
+	static const float spdConst = 5.0;
+	static const float headConst = 0.1;
+
 	Ogre::Vector3* velocity = new Ogre::Vector3(0,0,0);
 	Ogre::Vector3 camVec = Ogre::Vector3::ZERO;
 
 	toggleTimer -= fe.timeSinceLastFrame;
+
 	if(mKeyboard->isKeyDown(OIS::KC_TAB) && toggleTimer < 0)//select entity
 	{
 		entMgr->enumerateIndex();
 		toggleTimer = 0.2;
 	}
 
-	if(mKeyboard->isKeyDown(OIS::KC_I) && toggleTimer < 0)//entity move forward
+	if(mKeyboard->isKeyDown(OIS::KC_I) && toggleTimer < 0)//entity increase speed
 	{
-		Physics *temp = (Physics*) entMgr->getEntity()->getAspect(1);
-		velocity = temp->getVelocity();
+		//get current desired speed
+		speed = entMgr->getEntity()->getSpeed();
 
-		velocity->z += moveConst;
+		//add to current speed -> new desired speed
+		speed += spdConst;
 
-		temp->setVelocity(*velocity);
+		//set new desired speed
+		entMgr->getEntity()->setDesiredSpeed(speed);
+
+		//reset toggle timer
 		toggleTimer = 0.2;
 	}
 	if(mKeyboard->isKeyDown(OIS::KC_J) && toggleTimer < 0)//entity move left
 	{
-		Physics *temp = (Physics*) entMgr->getEntity()->getAspect(1);
-		velocity = temp->getVelocity();
+		//get current desired heading
+		heading = entMgr->getEntity()->getHeading();
 
-		velocity->x -= moveConst;
+		//add to current heading -> new desired heading
+		heading -= headConst;
 
-		temp->setVelocity(*velocity);
+		//set new desired heading
+		entMgr->getEntity()->setDesiredHeading(heading);
+
+		//reset toggle timer
 		toggleTimer = 0.2;
+
 	}
-	if(mKeyboard->isKeyDown(OIS::KC_K) && toggleTimer < 0)//entity move back
+	if(mKeyboard->isKeyDown(OIS::KC_K) && toggleTimer < 0)//entity decrease speed
 	{
-		Physics *temp = (Physics*) entMgr->getEntity()->getAspect(1);
-		velocity = temp->getVelocity();
+		//get current desired speed
+		speed = entMgr->getEntity()->getSpeed();
 
-		velocity->z -= moveConst;
+		//add to current speed -> new desired speed
+		speed -= spdConst;
+		if(speed < 0)
+			speed = 0;
 
-		temp->setVelocity(*velocity);
+		//set new desired speed
+		entMgr->getEntity()->setDesiredSpeed(speed);
+
+		//reset toggle timer
 		toggleTimer = 0.2;
 	}
 	if(mKeyboard->isKeyDown(OIS::KC_L) && toggleTimer < 0)//entity move right
 	{
-		Physics *temp = (Physics*) entMgr->getEntity()->getAspect(1);
-		velocity = temp->getVelocity();
+		//get current desired heading
+		heading = entMgr->getEntity()->getHeading();
 
-		velocity->x -= moveConst;
+		//add to current heading -> new desired heading
+		heading += headConst;
 
-		temp->setVelocity(*velocity);
-		toggleTimer = 0.2;
-	}
-	if(mKeyboard->isKeyDown(OIS::KC_U) && toggleTimer < 0)//entity move up
-	{
-		Physics *temp = (Physics*) entMgr->getEntity()->getAspect(1);
-		velocity = temp->getVelocity();
+		//set new desired heading
+		entMgr->getEntity()->setDesiredHeading(heading);
 
-		velocity->y += moveConst;
-
-		temp->setVelocity(*velocity);
-		toggleTimer = 0.2;
-	}
-	if(mKeyboard->isKeyDown(OIS::KC_O) && toggleTimer < 0)//entity move down
-	{
-		Physics *temp = (Physics*) entMgr->getEntity()->getAspect(1);
-		velocity = temp->getVelocity();
-
-		velocity->y -= moveConst;
-
-		temp->setVelocity(*velocity);
-		toggleTimer = 0.2;
-	}
-
-	if(mKeyboard->isKeyDown(OIS::KC_N) && toggleTimer < 0)//entity rotation up
-	{
-		Rotator *temp = (Rotator*) entMgr->getEntity()->getAspect(2);
-		rotSpeed = temp->getRotationSpeed();
-
-		rotSpeed += moveConst;
-
-		temp->setRotationSpeed(rotSpeed);
-		toggleTimer = 0.2;
-	}
-	if(mKeyboard->isKeyDown(OIS::KC_M) && toggleTimer < 0)//entity rotation down
-	{
-		Rotator *temp = (Rotator*) entMgr->getEntity()->getAspect(2);
-		rotSpeed = temp->getRotationSpeed();
-
-		rotSpeed -= moveConst;
-
-		temp->setRotationSpeed(rotSpeed);
+		//reset toggle timer
 		toggleTimer = 0.2;
 	}
 
 	if(mKeyboard->isKeyDown(OIS::KC_SPACE) && toggleTimer < 0)//halt entity
 	{
-		Rotator *rtemp = (Rotator*) entMgr->getEntity()->getAspect(2);
-		rtemp->setRotationSpeed(0);
-
-		Physics *ptemp = (Physics*) entMgr->getEntity()->getAspect(1);
-		ptemp->setVelocity(Ogre::Vector3::ZERO);
 		toggleTimer = 0.2;
 	}
+
+	//move the entity
+	entMgr->getEntity()->orientedMove();
 
 	//Camera Controls
 	if(mKeyboard->isKeyDown(OIS::KC_E))//camera up
@@ -191,12 +170,16 @@ bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 
 void TutorialApplication::makeEntities()
 {
-	int spacing = 300;
-	for(int i=0 ; i<5 ; i++)
-		entMgr->createEntity(true, "cube" + i, Ogre::Vector3(i*spacing,0,0));
+	entMgr->createEntity("SAILBOAT", "SailBoat", Ogre::Vector3(0,0,0));
 
-	for(int i=0 ; i<5 ; i++)
-		entMgr->createEntity(false, "sphere" + i, Ogre::Vector3(i*spacing,0,spacing));
+	entMgr->createEntity("CIG", "CigBoat", Ogre::Vector3(0, 0, 50));
+
+	entMgr->createEntity("ALIEN", "AlienShip", Ogre::Vector3(0, 0, 100));
+
+	entMgr->createEntity("DESTROYER", "Ddg", Ogre::Vector3(0,0,150));
+
+	entMgr->createEntity("CARRIER", "Cvn", Ogre::Vector3(0,0,300));
+
 }
 
 void TutorialApplication::makeGround()
@@ -220,6 +203,15 @@ void TutorialApplication::makeGround()
 		floorEnt->setCastShadows(false);
 		floorEnt->setMaterialName("Ocean2_HLSL_GLSL");
 //		floorEnt->setMaterialName("Examples/Rockwall");
+}
+
+void TutorialApplication::makeLight()
+{
+	Ogre::Light* light = mSceneMgr->createLight("mainLight");
+	Ogre::SceneNode* lightNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+	lightNode->attachObject(light);
+	lightNode->setDirection(-1, -1, 0);
+	light->setPosition(100,340,220);
 }
 
 void TutorialApplication::makeSky()

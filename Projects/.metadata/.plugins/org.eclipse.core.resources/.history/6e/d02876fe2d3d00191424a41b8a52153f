@@ -1,0 +1,95 @@
+/*
+ * Renderable.cpp
+ *
+ *  Created on: Feb 22, 2019
+ *      Author: orion996
+ */
+#include "Renderable.h"
+
+Renderable::Renderable()
+{
+	//do nothing
+}
+
+Renderable::Renderable(Ogre::Vector3* pos, Ogre::SceneManager* mgr, std::string obj, std::string name)
+{
+	mPos = pos;
+	mName = name;
+	mScnMgr = mgr;
+
+	if(obj == "SPHERE")//sphere
+	{
+		mEntity = mScnMgr->createEntity("sphere.mesh");
+		mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+		mScnNode->attachObject(mEntity);
+		mScnNode->setPosition(*mPos);
+	}
+	else if(obj == "CUBE")
+	{
+		mEntity = mScnMgr->createEntity("cube.mesh");
+		mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+		mScnNode->attachObject(mEntity);
+		mScnNode->setPosition(*mPos);
+	}
+	else if(obj == "SAILBOAT")
+	{
+		mEntity = mScnMgr->createEntity("ailboat.mesh");
+		mEntity->setMaterialName("sailboat.material");
+		mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+		mScnNode->attachObject(mEntity);
+		mScnNode->setPosition(*mPos);
+//		mScnNode->yaw(Ogre::Degree(-90));
+	}
+	else if(obj == "CIG")
+	{
+		mEntity = mScnMgr->createEntity("cigarette.mesh");
+		mEntity->setMaterialName("cigarette.material");
+		mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+		mScnNode->attachObject(mEntity);
+		mScnNode->setPosition(*mPos);
+//		mScnNode->yaw(Ogre::Degree(-90));
+	}
+	else if(obj == "ALIEN")
+	{
+		mEntity = mScnMgr->createEntity("alienship.mesh");
+		mEntity->setMaterialName("alienship.material");
+		mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+		mScnNode->attachObject(mEntity);
+		mScnNode->setPosition(*mPos);
+//		mScnNode->yaw(Ogre::Degree(90));
+	}
+	else if(obj == "DDG")
+	{
+		mEntity = mScnMgr->createEntity("ddg51.mesh");
+		mEntity->setMaterialName("ddg51.material");
+		mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+		mScnNode->attachObject(mEntity);
+		mScnNode->setPosition(*mPos);
+//		mScnNode->yaw(Ogre::Degree(90));
+	}
+
+
+
+}
+
+Renderable::~Renderable()
+{
+	//do nothing
+}
+
+void Renderable::Tick(float dt)
+{
+	//mScnNode->setPosition(*mPos);
+	//mScnNode->translate(*mPos * dt, Ogre::Node::TS_LOCAL);
+	mScnNode->setPosition(*mPos);
+}
+
+Ogre::SceneNode* Renderable::getSceneNode()
+{
+	return mScnNode;
+}
+
+void Renderable::showBox(bool show)
+{
+	mScnNode->showBoundingBox(show);
+}

@@ -12,6 +12,7 @@ public:
   void makeGround();
   void makeSky();
   void makeEntities();
+  void makeLight();
 
 protected:
   virtual void createScene();

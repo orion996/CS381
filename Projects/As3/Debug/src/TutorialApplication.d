@@ -1,6 +1,6 @@
 src/TutorialApplication.d: ../src/TutorialApplication.cpp \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/TutorialApplication.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/BaseApplication.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/TutorialApplication.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/BaseApplication.h \
  /usr/local/include/OGRE/OgreCamera.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -233,19 +233,20 @@ src/TutorialApplication.d: ../src/TutorialApplication.cpp \
  /usr/include/OIS/OISException.h /usr/include/OIS/OISEffect.h \
  /usr/include/OIS/OISForceFeedback.h \
  /usr/local/include/OGRE/SdkCameraMan.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/EntityMgr.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/EntityMgr.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Entity381.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Renderable.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Renderable.h \
  /usr/local/include/OGRE/OgreNode.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Physics.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Rotator.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Renderable.h
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Physics.h \
+ /usr/local/include/OGRE/OgreMath.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Rotator.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Renderable.h
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/TutorialApplication.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/TutorialApplication.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/BaseApplication.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/BaseApplication.h:
 
 /usr/local/include/OGRE/OgreCamera.h:
 
@@ -739,20 +740,22 @@ src/TutorialApplication.d: ../src/TutorialApplication.cpp \
 
 /usr/local/include/OGRE/SdkCameraMan.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/EntityMgr.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/EntityMgr.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Entity381.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Renderable.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Renderable.h:
 
 /usr/local/include/OGRE/OgreNode.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Physics.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Physics.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Rotator.h:
+/usr/local/include/OGRE/OgreMath.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Renderable.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Rotator.h:
+
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Renderable.h:

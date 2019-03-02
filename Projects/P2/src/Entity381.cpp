@@ -11,7 +11,7 @@ Entity381::Entity381()
 	//do nothing
 }
 
-Entity381::Entity381(Ogre::SceneManager* mgr, bool objType, std::string name, Ogre::Vector3 pos)
+Entity381::Entity381(Ogre::SceneManager* mgr, std::string objType, std::string name, Ogre::Vector3 pos)
 {
 	mScnMgr = mgr;
 	Ogre::Vector3* position = new Ogre::Vector3(pos.x,pos.y,pos.z);

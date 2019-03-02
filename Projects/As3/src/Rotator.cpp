@@ -6,10 +6,12 @@
  */
 #include "Rotator.h"
 
-Rotator::Rotator(Ogre::SceneNode* node)
+Rotator::Rotator(Ogre::SceneNode* node, float *rs)
 {
 	mScnNode = node;
-	rotationSpeed = 0.0;
+	mRotationSpeed = rs;
+	*mRotationSpeed = 0.0;
+
 }
 
 Rotator::~Rotator()
@@ -17,19 +19,21 @@ Rotator::~Rotator()
 
 }
 
-float Rotator::getRotationSpeed()
+float* Rotator::getRotationSpeed()
 {
-	return rotationSpeed;
+	return mRotationSpeed;
 }
 
 void Rotator::setRotationSpeed(float rs)
 {
-	rotationSpeed = rs;
+	*mRotationSpeed = rs;
 }
 
 void Rotator::Tick(float dt)
 {
-	mScnNode->yaw(Ogre::Degree(rotationSpeed) * dt);
+	mScnNode->yaw(Ogre::Degree(*mRotationSpeed) * dt);
+
+	//std::cout << "********* " << *mRotationSpeed << " ************" << std::endl;
 }
 
 

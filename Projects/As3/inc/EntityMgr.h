@@ -11,6 +11,7 @@
 #include <OgreVector3.h>
 #include <OgreSceneManager.h>
 #include <vector>
+#include <string>
 
 #include "Entity381.h"
 
@@ -23,7 +24,7 @@ public:
 
 	void Tick(float dt);
 
-	void createEntity(bool, std::string, Ogre::Vector3);
+	void createEntity(std::string, std::string, Ogre::Vector3);
 	void destroyEntity();
 
 	void enumerateIndex();

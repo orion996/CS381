@@ -1,5 +1,5 @@
 src/Rotator.d: ../src/Rotator.cpp \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Rotator.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Rotator.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -65,9 +65,9 @@ src/Rotator.d: ../src/Rotator.cpp \
  /usr/local/include/OGRE/OgrePose.h \
  /usr/local/include/OGRE/OgreAnimationState.h \
  /usr/local/include/OGRE/OgreController.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Rotator.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Rotator.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -201,4 +201,4 @@ src/Rotator.d: ../src/Rotator.cpp \
 
 /usr/local/include/OGRE/OgreController.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h:

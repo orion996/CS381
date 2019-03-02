@@ -1,0 +1,245 @@
+#include "TutorialApplication.h"
+#include "EntityMgr.h"
+#include "Renderable.h"
+
+TutorialApplication::TutorialApplication(void)
+{
+}
+
+TutorialApplication::~TutorialApplication(void)
+{
+}
+
+//GLOBAL VARIABLES
+EntityMgr* entMgr;
+const float surfaceHeight = -120.0;
+//*****************
+
+void TutorialApplication::createScene(void)
+{
+	mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5,0.5,0.5));
+	mSceneMgr->setShadowTechnique(Ogre::SHADOWTYPE_STENCIL_MODULATIVE);
+
+	mCamera->lookAt(0,0,0);
+	std::cout << mCamera->getDirection() << std::endl;
+
+	makeLight();
+	makeGround();
+	makeSky();
+
+	entMgr = new EntityMgr(mSceneMgr);
+	makeEntities();
+
+
+}
+
+bool TutorialApplication::frameRenderingQueued(const Ogre::FrameEvent& fe)
+{
+	if(!processUnbufferedInput(fe))
+		return false;
+	if(mKeyboard->isKeyDown(OIS::KC_Q))
+		return false;
+
+	entMgr->Tick(fe.timeSinceLastFrame);
+
+
+	return BaseApplication::frameRenderingQueued(fe);
+}
+
+
+bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
+{
+	static float toggleTimer = 0.0;
+
+	static float speed = 0;
+	static float heading = 0;
+
+	static const float spdConst = 2.0;
+	static const float headConst = 0.5;
+
+	Ogre::Vector3* velocity = new Ogre::Vector3(0,0,0);
+	Ogre::Vector3 camVec = Ogre::Vector3::ZERO;
+
+	toggleTimer -= fe.timeSinceLastFrame;
+
+	if(mKeyboard->isKeyDown(OIS::KC_TAB) && toggleTimer < 0)//select entity
+	{
+		entMgr->enumerateIndex();
+		toggleTimer = 0.2;
+	}
+
+	if(mKeyboard->isKeyDown(OIS::KC_I) && toggleTimer < 0)//entity move forward
+	{
+		//get current desired speed
+		speed = entMgr->getEntity()->getSpeed();
+
+		//add to current speed -> new desired speed
+		speed += spdConst;
+
+		//set new desired speed
+		entMgr->getEntity()->setDesiredSpeed(speed);
+
+		//reset toggle timer
+		toggleTimer = 0.2;
+	}
+	if(mKeyboard->isKeyDown(OIS::KC_J) && toggleTimer < 0)//entity move left
+	{
+		//get current desired heading
+		heading = entMgr->getEntity()->getHeading();
+
+		//add to current heading -> new desired heading
+		heading -= headConst;
+
+		//set new desired heading
+		entMgr->getEntity()->setDesiredHeading(heading);
+
+		//reset toggle timer
+		toggleTimer = 0.2;
+
+	}
+	if(mKeyboard->isKeyDown(OIS::KC_K) && toggleTimer < 0)//entity move back
+	{
+		//get current desired speed
+		speed = entMgr->getEntity()->getSpeed();
+
+		//add to current speed -> new desired speed
+		speed -= spdConst;
+
+		//set new desired speed
+		entMgr->getEntity()->setDesiredSpeed(speed);
+
+		//reset toggle timer
+		toggleTimer = 0.2;
+	}
+	if(mKeyboard->isKeyDown(OIS::KC_L) && toggleTimer < 0)//entity move right
+	{
+		//get current desired heading
+		heading = entMgr->getEntity()->getHeading();
+
+		//add to current heading -> new desired heading
+		heading += headConst;
+
+		//set new desired heading
+		entMgr->getEntity()->setDesiredHeading(heading);
+
+		//reset toggle timer
+		toggleTimer = 0.2;
+	}
+
+	if(mKeyboard->isKeyDown(OIS::KC_SPACE) && toggleTimer < 0)//halt entity
+	{
+		toggleTimer = 0.2;
+	}
+
+	//move the entity
+	entMgr->getEntity()->orientedMove();
+
+	//Camera Controls
+	if(mKeyboard->isKeyDown(OIS::KC_E))//camera up
+	{
+		camVec = mCamera->getPosition();
+		camVec.y += 0.5;
+		mCamera->setPosition(camVec);
+	}
+	if(mKeyboard->isKeyDown(OIS::KC_F))//camera down
+	{
+		camVec = mCamera->getPosition();
+		camVec.y -= 0.5;
+		mCamera->setPosition(camVec);
+	}
+
+	if(mKeyboard->isKeyDown(OIS::KC_LSHIFT))
+	{
+		if(mKeyboard->isKeyDown(OIS::KC_A))
+		{
+
+		}
+		else if(mKeyboard->isKeyDown(OIS::KC_D))
+		{
+
+		}
+
+	}
+
+
+
+	return true;
+}
+
+void TutorialApplication::makeEntities()
+{
+	entMgr->createEntity("SAILBOAT", "Sailboat", Ogre::Vector3(0,0,0));
+}
+
+void TutorialApplication::makeGround()
+{
+	//create the plane
+		Ogre::Plane plane(Ogre::Vector3::UNIT_Y, 0);
+		Ogre::MeshManager::getSingleton().createPlane(
+				"ground", Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, //region name
+				plane, //plane object
+				10000, 10000, 20, 20, //dimensions?
+				true, //toggle normal?
+				1, 5, 5, //uv coordinate stuff
+				Ogre::Vector3::UNIT_Z //normal vector
+		);
+
+		//attach ground to the scene
+		Ogre::SceneNode* floorNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+		Ogre::Entity* floorEnt = mSceneMgr->createEntity("ground");
+		floorNode->setPosition(Ogre::Vector3(0, surfaceHeight, 0));
+		floorNode->attachObject(floorEnt);
+		floorEnt->setCastShadows(false);
+		floorEnt->setMaterialName("Ocean2_HLSL_GLSL");
+//		floorEnt->setMaterialName("Examples/Rockwall");
+}
+
+void TutorialApplication::makeLight()
+{
+	Ogre::Light* light = mSceneMgr->createLight("mainLight");
+	Ogre::SceneNode* lightNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+	lightNode->attachObject(light);
+	lightNode->setDirection(-1, -1, 0);
+	light->setPosition(100,340,220);
+}
+
+void TutorialApplication::makeSky()
+{
+	mSceneMgr->setSkyBox(true, "Examples/StormySkyBox");
+}
+
+#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+#define WIN32_LEAN_AND_MEAN
+#include "windows.h"
+#endif
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+    INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE, LPSTR strCmdLine, INT)
+#else
+    int main(int argc, char *argv[])
+#endif
+    {
+	// Create application object
+	TutorialApplication app;
+
+	try {
+	    app.go();
+	} catch(Ogre::Exception& e)  {
+#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+	    MessageBox(NULL, e.getFullDescription().c_str(), "An exception has occurred!", MB_OK | MB_ICONERROR | MB_TASKMODAL);
+#else
+	    std::cerr << "An exception has occurred: " <<
+		e.getFullDescription().c_str() << std::endl;
+#endif
+	}
+
+	return 0;
+    }
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,5 +1,5 @@
 src/Physics.d: ../src/Physics.cpp \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Physics.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Physics.h \
  /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -121,10 +121,10 @@ src/Physics.d: ../src/Physics.cpp \
  /usr/local/include/OGRE/OgreHardwareCounterBuffer.h \
  /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
  /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
- /usr/local/include/OGRE/OgreVector3.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h
+ /usr/local/include/OGRE/OgreVector3.h /usr/local/include/OGRE/OgreMath.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Physics.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Physics.h:
 
 /usr/local/include/OGRE/OgreSceneNode.h:
 
@@ -376,4 +376,6 @@ src/Physics.d: ../src/Physics.cpp \
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h:
+/usr/local/include/OGRE/OgreMath.h:
+
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h:

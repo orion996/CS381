@@ -1,0 +1,67 @@
+/*
+ * Renderable.cpp
+ *
+ *  Created on: Feb 22, 2019
+ *      Author: orion996
+ */
+#include "Renderable.h"
+
+Renderable::Renderable()
+{
+	//do nothing
+}
+
+Renderable::Renderable(Ogre::Vector3* pos, Ogre::SceneManager* mgr, std::string obj, std::string name)
+{
+	mPos = pos;
+	mName = name;
+	mScnMgr = mgr;
+
+	if(obj == "SPHERE")//sphere
+	{
+		mEntity = mScnMgr->createEntity("sphere.mesh");
+		mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+		mScnNode->attachObject(mEntity);
+		mScnNode->setPosition(*mPos);
+	}
+	else if(obj == "CUBE")
+	{
+		mEntity = mScnMgr->createEntity("cube.mesh");
+		mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+		mScnNode->attachObject(mEntity);
+		mScnNode->setPosition(*mPos);
+	}
+	else if(obj == "BANSHEE")
+	{
+		mEntity = mScnMgr->createEntity("banshee.mesh");
+		mEntity->setMaterialName("banshee.material");
+		mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);
+		mScnNode->attachObject(mEntity);
+		mScnNode->setPosition(*mPos);
+		mScnNode->yaw(Ogre::Degree(-90));
+	}
+
+
+}
+
+Renderable::~Renderable()
+{
+	//do nothing
+}
+
+void Renderable::Tick(float dt)
+{
+	//mScnNode->setPosition(*mPos);
+	//mScnNode->translate(*mPos * dt, Ogre::Node::TS_LOCAL);
+	mScnNode->setPosition(*mPos * dt);
+}
+
+Ogre::SceneNode* Renderable::getSceneNode()
+{
+	return mScnNode;
+}
+
+void Renderable::showBox(bool show)
+{
+	mScnNode->showBoundingBox(show);
+}

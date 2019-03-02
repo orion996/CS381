@@ -1,5 +1,5 @@
 src/Renderable.d: ../src/Renderable.cpp \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Renderable.h \
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Renderable.h \
  /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -122,9 +122,9 @@ src/Renderable.d: ../src/Renderable.cpp \
  /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
  /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
  /usr/local/include/OGRE/OgreNode.h \
- /home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h
+ /home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Renderable.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Renderable.h:
 
 /usr/local/include/OGRE/OgreSceneNode.h:
 
@@ -376,4 +376,4 @@ src/Renderable.d: ../src/Renderable.cpp \
 
 /usr/local/include/OGRE/OgreNode.h:
 
-/home/orion996/Documents/CS/CS381/Projects/P2/inc/Aspect.h:
+/home/orion996/Documents/CS/CS381/Projects/As3/inc/Aspect.h:

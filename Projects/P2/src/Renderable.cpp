@@ -11,19 +11,23 @@ Renderable::Renderable()
 	//do nothing
 }
 
-Renderable::Renderable(Ogre::Vector3* pos, Ogre::SceneManager* mgr, bool obj, std::string name)
+Renderable::Renderable(Ogre::Vector3* pos, Ogre::SceneManager* mgr, std::string obj, std::string name)
 {
 	mPos = pos;
 	mName = name;
 	mScnMgr = mgr;
 
-	if(obj == false)//sphere
+	if(obj == "SPHERE")//sphere
 	{
 		mEntity = mScnMgr->createEntity("sphere.mesh");
 	}
-	else if(obj == true)
+	else if(obj == "CUBE")
 	{
 		mEntity = mScnMgr->createEntity("cube.mesh");
+	}
+	else if(obj == "BANSHEE")
+	{
+
 	}
 
 	mScnNode = mScnMgr->getRootSceneNode()->createChildSceneNode(mName);

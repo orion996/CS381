@@ -18,14 +18,12 @@ const float surfaceHeight = -120.0;
 void TutorialApplication::createScene(void)
 {
 	mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5,0.5,0.5));
-	//mSceneMgr->setShadowTechnique(Ogre::SHADOWTYPE_STENCIL_MODULATIVE);
+	mSceneMgr->setShadowTechnique(Ogre::SHADOWTYPE_STENCIL_MODULATIVE);
 
 	mCamera->lookAt(0,0,0);
 	std::cout << mCamera->getDirection() << std::endl;
 
-	Ogre::Light* light = mSceneMgr->createLight("mainLight");
-	light->setPosition(20,80,50);
-
+	makeLight();
 	makeGround();
 	makeSky();
 
@@ -193,10 +191,10 @@ void TutorialApplication::makeEntities()
 {
 	int spacing = 300;
 	for(int i=0 ; i<5 ; i++)
-		entMgr->createEntity(true, "cube" + i, Ogre::Vector3(i*spacing,0,0));
+		entMgr->createEntity("CUBE", "cube" + i, Ogre::Vector3(i*spacing,0,0));
 
 	for(int i=0 ; i<5 ; i++)
-		entMgr->createEntity(false, "sphere" + i, Ogre::Vector3(i*spacing,0,spacing));
+		entMgr->createEntity("SPHERE", "sphere" + i, Ogre::Vector3(i*spacing,0,spacing));
 }
 
 void TutorialApplication::makeGround()
@@ -220,6 +218,15 @@ void TutorialApplication::makeGround()
 		floorEnt->setCastShadows(false);
 		floorEnt->setMaterialName("Ocean2_HLSL_GLSL");
 //		floorEnt->setMaterialName("Examples/Rockwall");
+}
+
+void TutorialApplication::makeLight()
+{
+	Ogre::Light* light = mSceneMgr->createLight("mainLight");
+	Ogre::SceneNode* lightNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+	lightNode->attachObject(light);
+	lightNode->setDirection(-1, -1, 0);
+	light->setPosition(100,340,220);
 }
 
 void TutorialApplication::makeSky()

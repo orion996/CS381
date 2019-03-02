@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
+<workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
 <window height="744" maximized="true" width="1024" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -32,28 +32,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" partName="TutorialApplication.cpp" path="/home/orion996/Documents/CS/CS381/Projects/As3/src/TutorialApplication.cpp" title="TutorialApplication.cpp" tooltip="As3/src/TutorialApplication.cpp" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" partName="TutorialApplication.cpp" path="/home/orion996/Documents/CS/CS381/Projects/As3/src/TutorialApplication.cpp" title="TutorialApplication.cpp" tooltip="As3/src/TutorialApplication.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/As3/src/TutorialApplication.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1110" selectionTopPixel="612"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" partName="Entity381.cpp" path="/home/orion996/Documents/CS/CS381/Projects/As3/src/Entity381.cpp" title="Entity381.cpp" tooltip="As3/src/Entity381.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/As3/src/Entity381.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1316" selectionTopPixel="657"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Physics.cpp" partName="Physics.cpp" path="/home/orion996/Documents/CS/CS381/Projects/As3/src/Physics.cpp" title="Physics.cpp" tooltip="As3/src/Physics.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/As3/src/Physics.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="667" selectionTopPixel="42"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Physics.h" partName="Physics.h" path="/home/orion996/Documents/CS/CS381/Projects/As3/inc/Physics.h" title="Physics.h" tooltip="As3/inc/Physics.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/As3/inc/Physics.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="507" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2118" selectionTopPixel="1230"/>
 </editor>
 </editors>
 <views>
@@ -66,7 +51,7 @@
 <expanded>
 <category IMemento.internal.id="Errors"/>
 <category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Warnings (33 items)"/>
+<category IMemento.internal.id="Warnings (36 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="163" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -281,7 +266,7 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@41ad452c" ratio="0.75" ratioLeft="471" ratioRight="157" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
@@ -295,121 +280,32 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/src/TutorialApplication.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/src/Entity381.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/inc/Entity381.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/src/Renderable.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/src/Physics.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/inc/Physics.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/As3/inc/Renderable"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/inc/Entity381.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/As3/resources.cfg"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/src/Renderable.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/inc/Physics.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/inc/Entity381.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/src/TutorialApplication.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/As3/src/Physics.cpp"/>
 </editors>
-<item historyLabel="Renderable.cpp" index="3">
-<position info="not_deleted" x="2059" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="1174" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="223" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="268" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="387" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="721" y="0"/>
-</item>
-<item historyLabel="Renderable.cpp" index="3">
-<position info="not_deleted" x="1426" y="0"/>
-</item>
-<item historyLabel="Renderable" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Renderable.cpp" index="3">
-<position info="not_deleted" x="1944" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="351" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="455" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="351" y="0"/>
-</item>
-<item historyLabel="Entity381.h" index="2">
-<position info="not_deleted" x="1090" y="0"/>
-</item>
-<item historyLabel="Renderable.cpp" index="3">
-<position info="not_deleted" x="2300" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="3738" y="0"/>
-</item>
-<item historyLabel="Entity381.h" index="2">
-<position info="not_deleted" x="1090" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="1211" y="0"/>
-</item>
-<item historyLabel="Renderable.cpp" index="3">
-<position info="not_deleted" x="1800" y="9"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="3871" y="0"/>
-</item>
-<item historyLabel="Renderable.cpp" index="3">
-<position info="not_deleted" x="2475" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="3871" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="1208" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="0">
-<position info="not_deleted" x="4143" y="0"/>
-</item>
-<item historyLabel="Physics.cpp" index="4">
-<position info="not_deleted" x="665" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="3262" y="0"/>
-</item>
-<item historyLabel="Physics.cpp" index="4">
-<position info="not_deleted" x="665" y="0"/>
-</item>
-<item historyLabel="Physics.h" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Physics.h" index="5">
+<item historyLabel="Physics.h" index="3">
 <position info="not_deleted" x="507" y="0"/>
 </item>
-<item historyLabel="Physics.cpp" index="4">
-<position/>
-</item>
-<item historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="3266" y="0"/>
-</item>
-<item historyLabel="Physics.h" index="5">
-<position info="not_deleted" x="507" y="0"/>
-</item>
-<item historyLabel="Physics.cpp" index="4">
+<item historyLabel="Physics.cpp" index="2">
 <position info="not_deleted" x="667" y="0"/>
 </item>
 <item historyLabel="Entity381.cpp" index="1">
 <position info="not_deleted" x="3266" y="0"/>
 </item>
-<item historyLabel="Entity381.h" index="7">
+<item historyLabel="Entity381.h" index="4">
 <position info="not_deleted" x="1175" y="0"/>
 </item>
 <item historyLabel="Entity381.cpp" index="1">
 <position info="not_deleted" x="3262" y="0"/>
 </item>
-<item historyLabel="resources.cfg" index="8">
+<item historyLabel="resources.cfg" index="5">
 <position info="not_deleted" x="1765" y="0"/>
 </item>
 <item historyLabel="Entity381.cpp" index="1">
@@ -418,7 +314,7 @@
 <item historyLabel="TutorialApplication.cpp" index="0">
 <position info="not_deleted" x="4143" y="0"/>
 </item>
-<item historyLabel="Renderable.cpp" index="9">
+<item historyLabel="Renderable.cpp" index="6">
 <position/>
 </item>
 <item historyLabel="TutorialApplication.cpp" index="0">
@@ -427,7 +323,7 @@
 <item historyLabel="Entity381.cpp" index="1">
 <position info="not_deleted" x="3262" y="0"/>
 </item>
-<item historyLabel="Physics.cpp" index="4">
+<item historyLabel="Physics.cpp" index="2">
 <position info="not_deleted" x="667" y="0"/>
 </item>
 <item historyLabel="TutorialApplication.cpp" index="0">
@@ -448,11 +344,101 @@
 <item historyLabel="Entity381.cpp" index="1">
 <position info="not_deleted" x="1257" y="0"/>
 </item>
-<item historyLabel="Renderable.cpp" index="9">
+<item historyLabel="Renderable.cpp" index="6">
 <position info="not_deleted" x="551" y="0"/>
 </item>
-<item active="true" historyLabel="Entity381.cpp" index="1">
-<position info="not_deleted" x="1257" y="0"/>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="1632" y="0"/>
+</item>
+<item historyLabel="Physics.h" index="7">
+<position info="not_deleted" x="787" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="8">
+<position info="not_deleted" x="797" y="0"/>
+</item>
+<item historyLabel="Physics.h" index="7">
+<position info="not_deleted" x="231" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="2005" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="8">
+<position info="not_deleted" x="1149" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="842" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="8">
+<position info="not_deleted" x="1026" y="123"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="842" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="9">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="8">
+<position info="not_deleted" x="1026" y="123"/>
+</item>
+<item historyLabel="Physics.h" index="7">
+<position info="not_deleted" x="447" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position/>
+</item>
+<item historyLabel="Physics.cpp" index="10">
+<position info="not_deleted" x="477" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="1446" y="0"/>
+</item>
+<item historyLabel="Physics.cpp" index="10">
+<position info="not_deleted" x="270" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="1058" y="0"/>
+</item>
+<item historyLabel="TutorialApplication.cpp" index="9">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="1119" y="0"/>
+</item>
+<item historyLabel="Physics.h" index="7">
+<position info="not_deleted" x="447" y="0"/>
+</item>
+<item historyLabel="Physics.cpp" index="10">
+<position info="not_deleted" x="1913" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="2600" y="0"/>
+</item>
+<item historyLabel="Physics.h" index="7">
+<position info="not_deleted" x="447" y="0"/>
+</item>
+<item historyLabel="Physics.cpp" index="10">
+<position info="not_deleted" x="716" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="2600" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="2627" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="2674" y="0"/>
+</item>
+<item historyLabel="Physics.cpp" index="10">
+<position info="not_deleted" x="1858" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="2354" y="0"/>
+</item>
+<item historyLabel="Physics.h" index="7">
+<position info="not_deleted" x="447" y="0"/>
+</item>
+<item active="true" historyLabel="TutorialApplication.cpp" index="9">
+<position info="not_deleted" x="2118" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -460,13 +446,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="topLeft"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="topRight"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -474,22 +453,20 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@41a0a5f3"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@66afacdb"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@41ad452c"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" tooltip="As3/inc/Entity381.h">
+<persistable path="/As3/inc/Entity381.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Renderable.cpp" tooltip="As3/src/Renderable.cpp">
 <persistable path="/As3/src/Renderable.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="resources.cfg" tooltip="As3/resources.cfg">
 <persistable path="/As3/resources.cfg"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" tooltip="As3/inc/Entity381.h">
-<persistable path="/As3/inc/Entity381.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Physics.h" tooltip="As3/inc/Physics.h">
 <persistable path="/As3/inc/Physics.h"/>

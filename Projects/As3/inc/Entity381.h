@@ -38,9 +38,9 @@ public:
 
 	//as3 functions
 	void orientedMove();
-	Ogre::Real getSpeed();
+	float getSpeed();
 	float getHeading();
-	void setDesiredSpeed(Ogre::Real);
+	void setDesiredSpeed(float);
 	void setDesiredHeading(float);
 
 	Ogre::SceneNode* mScnNode;
@@ -51,12 +51,13 @@ public:
 	Ogre::Vector3* mVelocity;
 	float* mRotationSpeed;
 
-	Ogre::Real mSpeed = 0;
-	float mHeading = 0;
-	Ogre::Real mAcceleration = 0;
-	float mTurnRate = 0;
-	float mDesiredHeading = 0;
-	Ogre::Real mDesiredSpeed = 0;
+	//as3 variables
+	float* mSpeed;
+	float* mHeading;
+	float* mAcceleration;
+	float* mTurnRate;
+	float* mDesiredHeading;
+	float* mDesiredSpeed;
 
 private:
 	std::vector<Aspect*> aspects;

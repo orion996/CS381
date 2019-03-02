@@ -130,6 +130,10 @@ bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 
 	if(mKeyboard->isKeyDown(OIS::KC_SPACE) && toggleTimer < 0)//halt entity
 	{
+		//set speed to Zero
+		entMgr->getEntity()->setDesiredSpeed(0);
+
+		//reset toggle Timer
 		toggleTimer = 0.2;
 	}
 

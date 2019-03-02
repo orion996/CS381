@@ -1,4 +1,4 @@
-13:37:27 **** Incremental Build of configuration Debug for project As3 ****
+14:28:54 **** Incremental Build of configuration Debug for project As3 ****
 make all 
 Building file: ../src/Entity381.cpp
 Invoking: GCC C++ Compiler
@@ -7,35 +7,22 @@ In file included from ../src/Entity381.cpp:7:0:
 /home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h:49:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool isSelected = false;
                     ^
-/home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h:54:22: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  Ogre::Real mSpeed = 0;
-                      ^
-/home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h:55:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  float mHeading = 0;
-                   ^
-/home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h:56:29: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  Ogre::Real mAcceleration = 0;
-                             ^
-/home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h:57:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  float mTurnRate = 0;
-                    ^
-/home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h:58:26: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  float mDesiredHeading = 0;
-                          ^
-/home/orion996/Documents/CS/CS381/Projects/As3/inc/Entity381.h:59:29: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  Ogre::Real mDesiredSpeed = 0;
-                             ^
 ../src/Entity381.cpp: In member function ‘void Entity381::Tick(float)’:
-../src/Entity381.cpp:77:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/Entity381.cpp:88:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
   for (int i=0 ; i<aspects.size() ; i++)
                   ^
 Finished building: ../src/Entity381.cpp
+ 
+Building file: ../src/Physics.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I"/home/orion996/Documents/CS/CS381/Projects/As3/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics.d" -MT"src/Physics.d" -o "src/Physics.o" "../src/Physics.cpp"
+Finished building: ../src/Physics.cpp
  
 Building target: As3
 Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "As3"  ./src/Aspect.o ./src/BaseApplication.o ./src/Entity381.o ./src/EntityMgr.o ./src/Physics.o ./src/Renderable.o ./src/Rotator.o ./src/TutorialApplication.o   -lOgreMain -lOgreOverlay -lOIS
 Finished building target: As3
  
-13:37:31 **** Incremental Build of configuration Debug for project As3 ****
+14:29:01 **** Incremental Build of configuration Debug for project As3 ****
 make all 
 make: Nothing to be done for 'all'.

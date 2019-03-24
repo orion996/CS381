@@ -223,11 +223,11 @@ src/Entity381.d: ../src/Entity381.cpp \
  /usr/include/OIS/OISMultiTouch.h /usr/include/OIS/OISInputManager.h \
  /usr/include/OIS/OISFactoryCreator.h /usr/include/OIS/OISException.h \
  /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h \
+ /usr/local/include/OGRE/OgreVector3.h \
  /home/orion996/Documents/CS/CS381/Projects/As5/inc/Mgr.h \
  /home/orion996/Documents/CS/CS381/Projects/As5/inc/Entity381.h \
  /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
- /usr/local/include/OGRE/OgreVector3.h \
  /home/orion996/Documents/CS/CS381/Projects/As5/inc/Aspect.h \
  /home/orion996/Documents/CS/CS381/Projects/As5/inc/Engine.h \
  /home/orion996/Documents/CS/CS381/Projects/As5/inc/Physics2D.h \
@@ -705,6 +705,8 @@ src/Entity381.d: ../src/Entity381.cpp \
 
 /usr/include/OIS/OISForceFeedback.h:
 
+/usr/local/include/OGRE/OgreVector3.h:
+
 /home/orion996/Documents/CS/CS381/Projects/As5/inc/Mgr.h:
 
 /home/orion996/Documents/CS/CS381/Projects/As5/inc/Entity381.h:
@@ -712,8 +714,6 @@ src/Entity381.d: ../src/Entity381.cpp \
 /usr/local/include/OGRE/OgreEntity.h:
 
 /usr/local/include/OGRE/OgreSceneManager.h:
-
-/usr/local/include/OGRE/OgreVector3.h:
 
 /home/orion996/Documents/CS/CS381/Projects/As5/inc/Aspect.h:
 

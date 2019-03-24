@@ -82,8 +82,6 @@ void GfxMgr::Init(){
   Ogre::ResourceGroupManager::getSingleton().initialiseAllResourceGroups();
 
 
-
-
   mCamera = mSceneMgr->createCamera("MainCam");
   mCamera->setPosition(0, 0, 80);
   mCamera->lookAt(0, 0, -300);

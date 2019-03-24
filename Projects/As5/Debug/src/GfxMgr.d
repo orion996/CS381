@@ -231,6 +231,7 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
  /usr/include/OIS/OISMultiTouch.h /usr/include/OIS/OISInputManager.h \
  /usr/include/OIS/OISFactoryCreator.h /usr/include/OIS/OISException.h \
  /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h \
+ /usr/local/include/OGRE/OgreVector3.h \
  /home/orion996/Documents/CS/CS381/Projects/As5/inc/Mgr.h
 
 /usr/local/include/OGRE/OgreEntity.h:
@@ -720,5 +721,7 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
 /usr/include/OIS/OISEffect.h:
 
 /usr/include/OIS/OISForceFeedback.h:
+
+/usr/local/include/OGRE/OgreVector3.h:
 
 /home/orion996/Documents/CS/CS381/Projects/As5/inc/Mgr.h:

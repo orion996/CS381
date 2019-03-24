@@ -48,10 +48,11 @@ public:
 	//mouse selection
 	bool mMoveableFound;
 	Ogre::RaySceneQuery* mRayScnQuery;
-	Ogre::SceneNode* mCurObj;
 	OgreBites::SdkTrayManager* mTrayMgr;
 	OgreBites::SdkCameraMan* mCameraMan;
 	OgreBites::InputContext mInputContext;
+
+	bool followMode;
 
 	bool lmbDown;
 	bool rmbDown;

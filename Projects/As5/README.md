@@ -14,6 +14,7 @@ SPACE - Selected Ship Set Speed to Zero
 
 TAB - Cycle Through Selected Ships (shown by Bounding Box)
 LMB - Select a Ship (shown by Bounding Box)
+RMB(Hold) - Allows user to look around using the mouse
 
 W - Camera Forward
 A - Camera Left
@@ -21,6 +22,7 @@ S - Camera Back
 D - Camera Right
 E - Camera Up
 F - Camera Down
+C - Toggle Follow Camera
 
 Lshift + A - Yaw Camera left
 Lshift + D - Yaw Camera right

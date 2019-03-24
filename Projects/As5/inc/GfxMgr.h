@@ -12,9 +12,7 @@
 #include <OgreWindowEventUtilities.h>
 
 # include <SdkTrays.h>
-
-
-
+#include <OgreVector3.h>
 
 #include <Mgr.h>
 
@@ -45,7 +43,6 @@ public:
 	Ogre::SceneManager* mSceneMgr;
 	Ogre::Camera* mCamera;
 	Ogre::OverlaySystem* mOverlaySystem;
-
 };
 
 #endif /* GFXMGR_H_ */

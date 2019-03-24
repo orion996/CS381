@@ -27,6 +27,7 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
 	mCameraMan = 0;
 	mTrayMgr = 0;
 	lmbDown = rmbDown = false;
+	followMode = false;
 }
 
 InputMgr::~InputMgr() {
@@ -72,28 +73,17 @@ void InputMgr::Init(){
 	  mMouse->setEventCallback(this);
 	  mKeyboard->setEventCallback(this);
 
-//	  mCameraMan = new OgreBites::SdkCameraMan(
-//			  engine->gfxMgr->mCamera);
-
-
-//	  if(mMouse) Ogre::LogManager::getSingletonPtr()->logMessage("*** Mouse ***");
-//	  if(mKeyboard) Ogre::LogManager::getSingletonPtr()->logMessage("*** KB ***");
+	  mCameraMan = new OgreBites::SdkCameraMan(
+			  engine->gfxMgr->mCamera);
 
 	   mInputContext.mKeyboard = mKeyboard;
 	   mInputContext.mMouse = mMouse;
-
-//		  if(mInputContext.mMouse == mMouse) Ogre::LogManager::getSingletonPtr()->logMessage("*** Mouse ***");
-//		  if(mInputContext.mKeyboard == mKeyboard) Ogre::LogManager::getSingletonPtr()->logMessage("*** KB ***");
-
-//	   if(engine->gfxMgr) Ogre::LogManager::getSingletonPtr()->logMessage("*** GFX ***");
-//	   if(engine->gfxMgr->mWindow) Ogre::LogManager::getSingletonPtr()->logMessage("*** Window ***");
-//	   if(!mTrayMgr)Ogre::LogManager::getSingletonPtr()->logMessage("*** No Tray ***");
 
 	   mTrayMgr = new OgreBites::SdkTrayManager("InterfaceName",
 			   engine->gfxMgr->mWindow,
 			   mInputContext,
 			   engine->gfxMgr);
-	   mTrayMgr->showCursor();
+	   //mTrayMgr->showCursor();
 
 	   mRayScnQuery = engine->gfxMgr->mSceneMgr->createRayQuery(Ogre::Ray());
 
@@ -163,7 +153,27 @@ void InputMgr::UpdateCamera(float dt){
 	      dirVec.x += move;
 	  }
 
-	  engine->gameMgr->cameraNode->translate(dirVec * dt, Ogre::Node::TS_LOCAL);
+	  //follow Mode
+	  keyboardTimer -= dt;
+	  if ((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_C))
+	  {
+		  keyboardTimer = .5;
+
+		  if(!followMode)
+			  followMode = true;
+		  else if(followMode)
+			  followMode = false;
+	  }
+
+	  if(followMode)
+	  {
+		  std::cout << "*** Following ***" << std::endl;
+		  Ogre::Vector3 pos = engine->entityMgr->selectedEntity->position;
+		  engine->gameMgr->cameraNode->setPosition(pos.x, pos.y + 40, pos.z + 80);
+	  }
+
+	  else if(!followMode)
+		  engine->gameMgr->cameraNode->translate(dirVec * dt, Ogre::Node::TS_LOCAL);
 }
 
 void InputMgr::UpdateVelocityAndSelection(float dt){
@@ -228,7 +238,7 @@ bool InputMgr::keyReleased(const OIS::KeyEvent& ke){
 bool InputMgr::mouseMoved(const OIS::MouseEvent& me){
 
 	mTrayMgr->injectMouseMove(me);
-////	mCameraMan->injectMouseMove(me);
+	if(rmbDown) mCameraMan->injectMouseMove(me);
 
 	return true;
 }
@@ -265,7 +275,7 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	else if (mid == OIS::MB_Right)
 	{
-		mTrayMgr->hideCursor();
+		//mTrayMgr->hideCursor();
 		mouseMoved(me);
 		rmbDown = true;
 
@@ -278,7 +288,7 @@ bool InputMgr::mouseReleased(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	if (mid == OIS::MB_Right)
 	{
-		mTrayMgr->showCursor();
+		//mTrayMgr->showCursor();
 		rmbDown = false;
 	}
 	else if (mid == OIS::MB_Left)

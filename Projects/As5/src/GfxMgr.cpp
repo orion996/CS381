@@ -27,6 +27,7 @@ GfxMgr::GfxMgr(Engine *engine): Mgr(engine) {
 	mWindow = 0;
 	mSceneMgr = 0;
 	mCamera = 0;
+	mOverlaySystem = 0;
 }
 
 GfxMgr::~GfxMgr() {
@@ -70,12 +71,18 @@ void GfxMgr::Init(){
   if (!(mRoot->restoreConfig() || mRoot->showConfigDialog()))
 	  std::cerr << "Could not find Config File and could not show Config Dialog" << std::endl;
 
+//  if(!this->mWindow) Ogre::LogManager::getSingletonPtr()->logMessage("*** Window ***");
   mWindow = mRoot->initialise(true, "CS381 Game Engine Version 1.0");
+
+  mSceneMgr = mRoot->createSceneManager(Ogre::ST_GENERIC);
+  mOverlaySystem = new Ogre::OverlaySystem();
+  mSceneMgr->addRenderQueueListener(mOverlaySystem);
 
   Ogre::TextureManager::getSingleton().setDefaultNumMipmaps(5);
   Ogre::ResourceGroupManager::getSingleton().initialiseAllResourceGroups();
 
-  mSceneMgr = mRoot->createSceneManager(Ogre::ST_GENERIC);
+
+
 
   mCamera = mSceneMgr->createCamera("MainCam");
   mCamera->setPosition(0, 0, 80);
@@ -94,7 +101,6 @@ void GfxMgr::Init(){
   //mRoot->addFrameListener(this);
   //mRoot->startRendering();
 
-
 }
 
 void GfxMgr::windowClosed(Ogre::RenderWindow *rw){
@@ -103,6 +109,9 @@ void GfxMgr::windowClosed(Ogre::RenderWindow *rw){
 }
 
 bool GfxMgr::frameRenderingQueued(const Ogre::FrameEvent& fe){
+
+//	engine->inputMgr->mTrayMgr->frameRenderingQueued(fe);
+
 	if(mWindow->isClosed()) return false;
 	return true;
 }

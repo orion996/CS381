@@ -22,6 +22,7 @@ public:
 
   void CreateEntityOfTypeAtPosition(EntityTypes type, Ogre::Vector3 pos);
   void SelectNextEntity();
+  void SelectEntity(int id);
 
   void Tick(float dt);
 

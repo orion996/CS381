@@ -72,6 +72,15 @@ void EntityMgr::SelectNextEntity(){
 
 }
 
+void EntityMgr::SelectEntity(int id)
+{
+	selectedEntity->isSelected = false;
+	selectedEntityIndex = id;
+
+	entities[selectedEntityIndex]->isSelected = true;
+	selectedEntity = entities[selectedEntityIndex];
+}
+
 
 void EntityMgr::CreateEntityOfTypeAtPosition(EntityTypes entType, Ogre::Vector3 pos){
 

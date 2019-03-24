@@ -21,6 +21,8 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 
 	this->engine = engine;
 
+	Renderable * renderable = new Renderable(this);
+	aspects.push_back((Aspect*)renderable);
 
 	meshfilename = meshfname;
 	position = pos;
@@ -36,9 +38,6 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 
 //	Physics2D* phx2d = new Physics2D(this);
 //	aspects.push_back((Aspect*) phx2d);
-
-	Renderable * renderable = new Renderable(this);
-	aspects.push_back((Aspect*)renderable);
 
 	this->acceleration = 0;
 	this->desiredHeading = this->heading = 0;

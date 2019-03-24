@@ -13,16 +13,22 @@
 #include <OISKeyboard.h>
 #include <OISMouse.h>
 
-#  include <SdkTrays.h>
-#  include <SdkCameraMan.h>
+#include <Terrain/OgreTerrainGroup.h>
+#include <Terrain/OgreTerrain.h>
+
+# include <SdkTrays.h>
+# include <SdkCameraMan.h>
 #include <Mgr.h>
+#include <Aspect.h>
 
 class Engine;
 
 class InputMgr:
 		public Mgr,
 		public OIS::KeyListener,
-		public OIS::MouseListener {
+		public OIS::MouseListener,
+		public OgreBites::SdkTrayListener
+		{
 
 public:
 	InputMgr(Engine *engine);
@@ -39,13 +45,24 @@ public:
 	OIS::Keyboard* mKeyboard;
 	OIS::Mouse* mMouse;
 
+	//mouse selection
+	bool mMoveableFound;
+	Ogre::RaySceneQuery* mRayScnQuery;
+	Ogre::SceneNode* mCurObj;
+	OgreBites::SdkTrayManager* mTrayMgr;
+	OgreBites::SdkCameraMan* mCameraMan;
+	OgreBites::InputContext mInputContext;
+
+	bool lmbDown;
+	bool rmbDown;
+
 	void Init();
 	void Stop();
 	void Tick(float dt);
 	void LoadLevel();
 
 	float keyboardTimer;
-	const static float keyTime = 0.1f;
+	const static float keyTime = 0.2f;
 	float deltaDesiredSpeed, deltaDesiredHeading, deltaDesiredAltitude;
 	void UpdateCamera(float dt);
 	void UpdateVelocityAndSelection(float dt);

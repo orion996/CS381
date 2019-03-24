@@ -136,13 +136,7 @@ src/Engine.d: ../src/Engine.cpp \
  /usr/local/include/OGRE/OgreLodStrategy.h \
  /usr/local/include/OGRE/OgreWorkQueue.h \
  /usr/local/include/OGRE/OgreWindowEventUtilities.h \
- /home/orion996/Documents/CS/CS381/Projects/As5/inc/InputMgr.h \
- /usr/include/OIS/OISEvents.h /usr/include/OIS/OISPrereqs.h \
- /usr/include/OIS/OISConfig.h /usr/include/OIS/OISInputManager.h \
- /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISObject.h \
- /usr/include/OIS/OISInterface.h /usr/include/OIS/OISEvents.h \
- /usr/include/OIS/OISMouse.h /usr/local/include/OGRE/SdkTrays.h \
- /usr/local/include/OGRE/Ogre.h \
+ /usr/local/include/OGRE/SdkTrays.h /usr/local/include/OGRE/Ogre.h \
  /usr/local/include/OGRE/OgreArchiveManager.h \
  /usr/local/include/OGRE/OgreBillboardChain.h \
  /usr/local/include/OGRE/OgreBillboardSet.h \
@@ -233,11 +227,28 @@ src/Engine.d: ../src/Engine.cpp \
  /usr/local/include/OGRE/Overlay/OgreOverlayElementFactory.h \
  /usr/local/include/OGRE/OgreRenderQueueListener.h \
  /usr/local/include/OGRE/InputContext.h /usr/include/OIS/OIS.h \
- /usr/include/OIS/OISMouse.h /usr/include/OIS/OISKeyboard.h \
- /usr/include/OIS/OISJoyStick.h /usr/include/OIS/OISMultiTouch.h \
- /usr/include/OIS/OISInputManager.h /usr/include/OIS/OISFactoryCreator.h \
- /usr/include/OIS/OISException.h /usr/include/OIS/OISEffect.h \
- /usr/include/OIS/OISForceFeedback.h \
+ /usr/include/OIS/OISPrereqs.h /usr/include/OIS/OISConfig.h \
+ /usr/include/OIS/OISObject.h /usr/include/OIS/OISInterface.h \
+ /usr/include/OIS/OISMouse.h /usr/include/OIS/OISEvents.h \
+ /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISJoyStick.h \
+ /usr/include/OIS/OISMultiTouch.h /usr/include/OIS/OISInputManager.h \
+ /usr/include/OIS/OISFactoryCreator.h /usr/include/OIS/OISException.h \
+ /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h \
+ /home/orion996/Documents/CS/CS381/Projects/As5/inc/InputMgr.h \
+ /usr/include/OIS/OISEvents.h /usr/include/OIS/OISInputManager.h \
+ /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISMouse.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainGroup.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainPrerequisites.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrain.h \
+ /usr/local/include/OGRE/OgreAxisAlignedBox.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainMaterialGenerator.h \
+ /usr/local/include/OGRE/OgrePixelFormat.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainLayerBlendMap.h \
+ /usr/local/include/OGRE/OgreDataStream.h \
+ /usr/local/include/OGRE/OgreWorkQueue.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainLodManager.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainAutoUpdateLod.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrain.h \
  /usr/local/include/OGRE/SdkCameraMan.h
 
 /home/orion996/Documents/CS/CS381/Projects/As5/inc/Engine.h:
@@ -518,26 +529,6 @@ src/Engine.d: ../src/Engine.cpp \
 
 /usr/local/include/OGRE/OgreWindowEventUtilities.h:
 
-/home/orion996/Documents/CS/CS381/Projects/As5/inc/InputMgr.h:
-
-/usr/include/OIS/OISEvents.h:
-
-/usr/include/OIS/OISPrereqs.h:
-
-/usr/include/OIS/OISConfig.h:
-
-/usr/include/OIS/OISInputManager.h:
-
-/usr/include/OIS/OISKeyboard.h:
-
-/usr/include/OIS/OISObject.h:
-
-/usr/include/OIS/OISInterface.h:
-
-/usr/include/OIS/OISEvents.h:
-
-/usr/include/OIS/OISMouse.h:
-
 /usr/local/include/OGRE/SdkTrays.h:
 
 /usr/local/include/OGRE/Ogre.h:
@@ -724,7 +715,17 @@ src/Engine.d: ../src/Engine.cpp \
 
 /usr/include/OIS/OIS.h:
 
+/usr/include/OIS/OISPrereqs.h:
+
+/usr/include/OIS/OISConfig.h:
+
+/usr/include/OIS/OISObject.h:
+
+/usr/include/OIS/OISInterface.h:
+
 /usr/include/OIS/OISMouse.h:
+
+/usr/include/OIS/OISEvents.h:
 
 /usr/include/OIS/OISKeyboard.h:
 
@@ -741,5 +742,39 @@ src/Engine.d: ../src/Engine.cpp \
 /usr/include/OIS/OISEffect.h:
 
 /usr/include/OIS/OISForceFeedback.h:
+
+/home/orion996/Documents/CS/CS381/Projects/As5/inc/InputMgr.h:
+
+/usr/include/OIS/OISEvents.h:
+
+/usr/include/OIS/OISInputManager.h:
+
+/usr/include/OIS/OISKeyboard.h:
+
+/usr/include/OIS/OISMouse.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainGroup.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainPrerequisites.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrain.h:
+
+/usr/local/include/OGRE/OgreAxisAlignedBox.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainMaterialGenerator.h:
+
+/usr/local/include/OGRE/OgrePixelFormat.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainLayerBlendMap.h:
+
+/usr/local/include/OGRE/OgreDataStream.h:
+
+/usr/local/include/OGRE/OgreWorkQueue.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainLodManager.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainAutoUpdateLod.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrain.h:
 
 /usr/local/include/OGRE/SdkCameraMan.h:

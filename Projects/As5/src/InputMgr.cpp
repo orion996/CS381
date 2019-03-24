@@ -22,6 +22,11 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
 	deltaDesiredSpeed = 10.0f;
 	deltaDesiredHeading = 10.0f;
 	deltaDesiredAltitude = 10.0f;
+	mMoveableFound = false;
+	mRayScnQuery = 0;
+	mCameraMan = 0;
+	mTrayMgr = 0;
+	lmbDown = rmbDown = false;
 }
 
 InputMgr::~InputMgr() {
@@ -54,7 +59,7 @@ void InputMgr::Init(){
 	  mKeyboard = static_cast<OIS::Keyboard*>(
 	    mInputMgr->createInputObject(OIS::OISKeyboard, false));
 	  mMouse = static_cast<OIS::Mouse*>(
-	    mInputMgr->createInputObject(OIS::OISMouse, false));
+	    mInputMgr->createInputObject(OIS::OISMouse, true));
 
 	  int left, top;
 	  unsigned int width, height, depth;
@@ -66,6 +71,34 @@ void InputMgr::Init(){
 
 	  mMouse->setEventCallback(this);
 	  mKeyboard->setEventCallback(this);
+
+//	  mCameraMan = new OgreBites::SdkCameraMan(
+//			  engine->gfxMgr->mCamera);
+
+
+//	  if(mMouse) Ogre::LogManager::getSingletonPtr()->logMessage("*** Mouse ***");
+//	  if(mKeyboard) Ogre::LogManager::getSingletonPtr()->logMessage("*** KB ***");
+
+	   mInputContext.mKeyboard = mKeyboard;
+	   mInputContext.mMouse = mMouse;
+
+//		  if(mInputContext.mMouse == mMouse) Ogre::LogManager::getSingletonPtr()->logMessage("*** Mouse ***");
+//		  if(mInputContext.mKeyboard == mKeyboard) Ogre::LogManager::getSingletonPtr()->logMessage("*** KB ***");
+
+//	   if(engine->gfxMgr) Ogre::LogManager::getSingletonPtr()->logMessage("*** GFX ***");
+//	   if(engine->gfxMgr->mWindow) Ogre::LogManager::getSingletonPtr()->logMessage("*** Window ***");
+//	   if(!mTrayMgr)Ogre::LogManager::getSingletonPtr()->logMessage("*** No Tray ***");
+
+	   mTrayMgr = new OgreBites::SdkTrayManager("InterfaceName",
+			   engine->gfxMgr->mWindow,
+			   mInputContext,
+			   engine->gfxMgr);
+	   mTrayMgr->showCursor();
+
+	   mRayScnQuery = engine->gfxMgr->mSceneMgr->createRayQuery(Ogre::Ray());
+
+
+
 
 }
 
@@ -85,6 +118,7 @@ void InputMgr::Tick(float dt){
 	//Must capture both every tick for buffered input to work
 	mMouse->capture();
 	mKeyboard->capture();
+
 	if(mKeyboard->isKeyDown(OIS::KC_ESCAPE)){
 		engine->keepRunning = false;
 	}
@@ -192,13 +226,65 @@ bool InputMgr::keyReleased(const OIS::KeyEvent& ke){
 }
 
 bool InputMgr::mouseMoved(const OIS::MouseEvent& me){
+
+	mTrayMgr->injectMouseMove(me);
+////	mCameraMan->injectMouseMove(me);
+
 	return true;
 }
 
 bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
+
+	const OIS::MouseState &ms = mMouse->getMouseState();
+
+	if(mid == OIS::MB_Left)
+	{
+//		Ogre::Ray mouseRay = engine->gfxMgr->mCamera->getCameraToViewportRay(
+//				ms.X.abs / (float)(ms.width),
+//				ms.Y.abs / (float)(ms.height)
+//		);
+
+		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
+
+		std::vector<Entity381*> ent = engine->entityMgr->entities;
+
+		for(unsigned int iter = 0 ; iter < engine->entityMgr->entities.size() ; iter++)
+		{
+			std::pair<bool, float> result = mouseRay.intersects(
+					engine->entityMgr->entities[iter]->sceneNode->_getWorldAABB());
+
+			if(result.first)
+			{
+				engine->entityMgr->SelectEntity(iter);
+			}
+		}
+
+
+		lmbDown = true;
+	}
+
+	else if (mid == OIS::MB_Right)
+	{
+		mTrayMgr->hideCursor();
+		mouseMoved(me);
+		rmbDown = true;
+
+	}
+
 	return true;
 }
 
 bool InputMgr::mouseReleased(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
+
+	if (mid == OIS::MB_Right)
+	{
+		mTrayMgr->showCursor();
+		rmbDown = false;
+	}
+	else if (mid == OIS::MB_Left)
+	{
+		lmbDown = false;
+	}
+
 	return true;
 }

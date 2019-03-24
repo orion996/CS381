@@ -11,6 +11,10 @@
 #include <OgreRoot.h>
 #include <OgreWindowEventUtilities.h>
 
+# include <SdkTrays.h>
+
+
+
 
 #include <Mgr.h>
 
@@ -18,7 +22,8 @@
 class GfxMgr:
 		public Mgr,
 		public Ogre::WindowEventListener,
-		public Ogre::FrameListener {
+		public Ogre::FrameListener,
+		public OgreBites::SdkTrayListener{
 public:
 	GfxMgr(Engine *engine);
 	virtual ~GfxMgr();
@@ -39,6 +44,7 @@ public:
 	Ogre::RenderWindow* mWindow;
 	Ogre::SceneManager* mSceneMgr;
 	Ogre::Camera* mCamera;
+	Ogre::OverlaySystem* mOverlaySystem;
 
 };
 

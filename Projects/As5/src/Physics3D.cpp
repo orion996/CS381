@@ -59,6 +59,7 @@ void Physics3D::Tick(float dt){
 	}
 	entity->altitude = FixAngle(entity->altitude);
 
+
 	//Now do the trig
 	entity->velocity.y = Ogre::Math::Sin(Ogre::Degree(entity->altitude)) * entity->speed;
 	entity->velocity.x = Ogre::Math::Cos(Ogre::Degree(entity->heading)) * entity->speed; //adjacent/hyp

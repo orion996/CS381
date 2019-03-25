@@ -19,9 +19,9 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
 	this->mKeyboard = 0;
 	this->mMouse = 0;
 	this->keyboardTimer = keyTime;
-	deltaDesiredSpeed = 10.0f;
-	deltaDesiredHeading = 10.0f;
-	deltaDesiredAltitude = 10.0f;
+	deltaDesiredSpeed = 3.0f;
+	deltaDesiredHeading = 3.0f;
+	deltaDesiredAltitude = 3.0f;
 	mMoveableFound = false;
 	mRayScnQuery = 0;
 	mCameraMan = 0;
@@ -162,14 +162,20 @@ void InputMgr::UpdateCamera(float dt){
 		  if(!followMode)
 			  followMode = true;
 		  else if(followMode)
+		  {
+			  engine->gfxMgr->mCamera->setPosition(0, 0, 80);
+			  engine->gfxMgr->mCamera->lookAt(0, 0, -300);
 			  followMode = false;
+		  }
+
 	  }
 
 	  if(followMode)
 	  {
-		  std::cout << "*** Following ***" << std::endl;
-		  Ogre::Vector3 pos = engine->entityMgr->selectedEntity->position;
-		  engine->gameMgr->cameraNode->setPosition(pos.x, pos.y + 40, pos.z + 80);
+//		  std::cout << "*** Following ***" << std::endl;
+		  const Ogre::Vector3 pos = engine->entityMgr->selectedEntity->position;
+		  engine->gfxMgr->mCamera->setPosition(pos.x, pos.y, pos.z + 80);
+		  engine->gfxMgr->mCamera->lookAt(pos.x, pos.y, pos.z);
 	  }
 
 	  else if(!followMode)
@@ -207,6 +213,7 @@ void InputMgr::UpdateVelocityAndSelection(float dt){
 		engine->entityMgr->selectedEntity->desiredAltitude -= deltaDesiredAltitude;
 	}
 	engine->entityMgr->selectedEntity->desiredHeading = FixAngle(engine->entityMgr->selectedEntity->desiredHeading);
+	engine->entityMgr->selectedEntity->desiredAltitude = FixAngle(engine->entityMgr->selectedEntity->desiredAltitude);
 
 	//Set velocity to zero....
 	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_SPACE)){

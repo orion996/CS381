@@ -24,7 +24,8 @@ struct Command
 	Ogre::Vector3 point;
 	bool isDone;
 	Entity381* target;
-
+	Ogre::Vector3 upperBound;
+	Ogre::Vector3 lowerBound;
 };
 
 class UnitAI : Aspect
@@ -41,6 +42,8 @@ public:
 
 	void clearCommands();
 	void deleteCurrentCommand();
+
+	static const float boundConst = 50.0;
 };
 
 

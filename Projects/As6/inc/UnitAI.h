@@ -12,10 +12,8 @@
 #include <string>
 #include <OgreVector3.h>
 #include <Aspect.h>
-//#include <Entity381.h>
+#include <Utils.h>
 #include <OgreNode.h>
-
-//class Entity381;
 
 
 struct Command
@@ -43,7 +41,7 @@ public:
 	void clearCommands();
 	void deleteCurrentCommand();
 
-	static const float boundConst = 50.0;
+	static const float boundConst = 10.0;
 };
 
 

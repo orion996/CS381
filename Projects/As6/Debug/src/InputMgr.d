@@ -245,13 +245,13 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/SdkCameraMan.h \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/Aspect.h \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/UnitAI.h \
+ /home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h \
  /usr/local/include/OGRE/OgreNode.h \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/EntityMgr.h \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/Entity381.h \
  /usr/local/include/OGRE/OgreEntity.h \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/Types381.h \
- /home/orion996/Documents/CS/CS381/Projects/As6/inc/GameMgr.h \
- /home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h
+ /home/orion996/Documents/CS/CS381/Projects/As6/inc/GameMgr.h
 
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/Engine.h:
 
@@ -773,6 +773,8 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/UnitAI.h:
 
+/home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h:
+
 /usr/local/include/OGRE/OgreNode.h:
 
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/EntityMgr.h:
@@ -784,5 +786,3 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/Types381.h:
 
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/GameMgr.h:
-
-/home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h:

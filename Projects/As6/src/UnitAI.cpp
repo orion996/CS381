@@ -76,7 +76,7 @@ void UnitAI::Tick(float dt)
 		}
 		else//if no, rotate entity towards the point and max speed
 		{
-			entity->desiredHeading = (Ogre::Math::ATan2(direction.z, direction.x)).valueDegrees();
+			entity->desiredHeading = FixAngle((Ogre::Math::ATan2(direction.z, direction.x)).valueDegrees());
 			entity->desiredSpeed = entity->maxSpeed;
 		}
 	}
@@ -105,7 +105,7 @@ void UnitAI::Tick(float dt)
 		}
 		else//if no, rotate entity towards the point and max speed
 		{
-			entity->desiredHeading = (Ogre::Math::ATan2(direction.z, direction.x)).valueDegrees();
+			entity->desiredHeading = FixAngle((Ogre::Math::ATan2(direction.z, direction.x)).valueDegrees());
 			entity->desiredSpeed = entity->maxSpeed;
 		}
 	}

@@ -233,6 +233,7 @@ src/Entity381.d: ../src/Entity381.cpp \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/Physics2D.h \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/Physics3D.h \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/UnitAI.h \
+ /home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h \
  /usr/local/include/OGRE/OgreNode.h
 
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/GfxMgr.h:
@@ -726,5 +727,7 @@ src/Entity381.d: ../src/Entity381.cpp \
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/Physics3D.h:
 
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/UnitAI.h:
+
+/home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h:
 
 /usr/local/include/OGRE/OgreNode.h:

@@ -83,7 +83,7 @@ void InputMgr::Init(){
 			   engine->gfxMgr->mWindow,
 			   mInputContext,
 			   engine->gfxMgr);
-	   //mTrayMgr->showCursor();
+	   mTrayMgr->hideCursor();
 
 	   mRayScnQuery = engine->gfxMgr->mSceneMgr->createRayQuery(Ogre::Ray());
 
@@ -126,32 +126,40 @@ void InputMgr::UpdateCamera(float dt){
 	 Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;
 
 	  if (mKeyboard->isKeyDown(OIS::KC_W))
-	    dirVec.z -= move;
+		  dirVec.z -= move;
 
 	  if (mKeyboard->isKeyDown(OIS::KC_S))
-	    dirVec.z += move;
+		  dirVec.z += move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_E))
-	    dirVec.y += move;
+	  if (mKeyboard->isKeyDown(OIS::KC_T))
+		  dirVec.y += move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_F))
-	    dirVec.y -= move;
+	  if (mKeyboard->isKeyDown(OIS::KC_G))
+		  dirVec.y -= move;
 
 	  if (mKeyboard->isKeyDown(OIS::KC_A))
-	  {
-	    if (mKeyboard->isKeyDown(OIS::KC_LSHIFT))
-		      engine->gameMgr->cameraNode->yaw(Ogre::Degree(5 * rotate));
-	    else
-	      dirVec.x -= move;
-	  }
+		  dirVec.x -= move;
 
 	  if (mKeyboard->isKeyDown(OIS::KC_D))
-	  {
-	    if (mKeyboard->isKeyDown(OIS::KC_LSHIFT))
-	      engine->gameMgr->cameraNode->yaw(Ogre::Degree(-5 * rotate));
-	    else
-	      dirVec.x += move;
-	  }
+		  dirVec.x += move;
+
+	  if (mKeyboard->isKeyDown(OIS::KC_Q))
+		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(5 * rotate));
+
+	  if (mKeyboard->isKeyDown(OIS::KC_E))
+	  		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(-5 * rotate));
+
+	  if (mKeyboard->isKeyDown(OIS::KC_R))
+	  		  engine->gameMgr->cameraNode->pitch(Ogre::Degree(5 * rotate));
+
+	  if (mKeyboard->isKeyDown(OIS::KC_F))
+	  		  engine->gameMgr->cameraNode->pitch(Ogre::Degree(-5 * rotate));
+
+	  if (mKeyboard->isKeyDown(OIS::KC_Z))
+	  		  engine->gameMgr->cameraNode->roll(Ogre::Degree(5 * rotate));
+
+	  if (mKeyboard->isKeyDown(OIS::KC_X))
+	  		  engine->gameMgr->cameraNode->roll(Ogre::Degree(-5 * rotate));
 
 	  //follow Mode
 	  keyboardTimer -= dt;
@@ -308,7 +316,14 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 				//add intercept command with those coordinates
 				UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
-				uai->SetCommand("INTERCEPT", targetPoint, target);
+				if(mKeyboard->isKeyDown(OIS::KC_LSHIFT))
+				{
+					uai->AddCommand("INTERCEPT", targetPoint, target);
+				}
+				else
+				{
+					uai->SetCommand("INTERCEPT", targetPoint, target);
+				}
 
 //				std::cout << "INTERCEPT COMMAND" << std::endl;
 
@@ -326,7 +341,15 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 			//add moveTo command with those coordinates
 			UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
-			uai->SetCommand("MOVETO", worldPoint, NULL);
+
+			if(mKeyboard->isKeyDown(OIS::KC_LSHIFT))
+			{
+				uai->AddCommand("MOVETO", worldPoint, NULL);
+			}
+			else
+			{
+				uai->SetCommand("MOVETO", worldPoint, NULL);
+			}
 //			std::cout << "MOVETO COMMAND" << std::endl;
 
 			intercept = false;

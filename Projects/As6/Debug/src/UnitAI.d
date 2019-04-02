@@ -15,6 +15,7 @@ src/UnitAI.d: ../src/UnitAI.cpp \
  /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/Aspect.h \
+ /home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h \
  /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCommon.h \
  /usr/local/include/OGRE/OgreString.h \
  /usr/local/include/OGRE/OgreMatrix3.h \
@@ -159,6 +160,8 @@ src/UnitAI.d: ../src/UnitAI.cpp \
 /usr/local/include/OGRE/OgreQuaternion.h:
 
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/Aspect.h:
+
+/home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h:
 
 /usr/local/include/OGRE/OgreNode.h:
 

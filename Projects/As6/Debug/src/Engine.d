@@ -251,6 +251,7 @@ src/Engine.d: ../src/Engine.cpp \
  /usr/local/include/OGRE/Terrain/OgreTerrain.h \
  /usr/local/include/OGRE/SdkCameraMan.h \
  /home/orion996/Documents/CS/CS381/Projects/As6/inc/UnitAI.h \
+ /home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h \
  /usr/local/include/OGRE/OgreNode.h
 
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/Engine.h:
@@ -782,5 +783,7 @@ src/Engine.d: ../src/Engine.cpp \
 /usr/local/include/OGRE/SdkCameraMan.h:
 
 /home/orion996/Documents/CS/CS381/Projects/As6/inc/UnitAI.h:
+
+/home/orion996/Documents/CS/CS381/Projects/As6/inc/Utils.h:
 
 /usr/local/include/OGRE/OgreNode.h:

@@ -83,7 +83,7 @@ void InputMgr::Init(){
 			   engine->gfxMgr->mWindow,
 			   mInputContext,
 			   engine->gfxMgr);
-	   mTrayMgr->hideCursor();
+//	   mTrayMgr->hideCursor(); //DO NOT HIDE CURSOR!!!
 
 	   mRayScnQuery = engine->gfxMgr->mSceneMgr->createRayQuery(Ogre::Ray());
 
